@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relive Dance and Fitness - movement meets memory</title>
+    <meta name="description"
+        content="Join Rhythm Elite Dance Academy - Professional dance training in Hip Hop, Ballet, Contemporary, Jazz and more. Online classes available.">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Pacifico&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loader">
+            <div class="loader-inner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="./public/logo.jpeg" alt="Relive Dance Academy Logo">
+                    <div >
+                        <h2 class="neon-glow">REL!VE</h2>
+                        <span>Dance & Fitness Studio</span>
+                    </div>
+                </div>
+
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./aboutpage.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="training.html" class="nav-link">Training Programs</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="classes.html" class="nav-link">Online Classes</a>
+                        <div class="dropdown-content">
+                            <a href="bollywood.html">Bollywood Dance Class</a>
+                            <a href="semi-classical.html">Semi-Classical Dance Class</a>
+                            <a href="kids.html">Kids Dance Class</a>
+                            <a href="yoga.html">Yoga Class</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-carousel">
+            <div class="carousel-container">
+                <div class="carousel-slide active"
+                    style="background-image: url('./public/Relive\ \(3\).png');">
+                    <div class="carousel-overlay"></div>
+                </div>
+                <div class="carousel-slide"
+                    style="background-image: url('./public/Relive\ \(4\).png');">
+                    <div class="carousel-overlay"></div>
+                </div>
+                <div class="carousel-slide"
+                    style="background-image: url('https://images.pexels.com/photos/3586966/pexels-photo-3586966.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
+                    <div class="carousel-overlay"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="hero-content">
+            <h1 class="hero-title">
+                Welcome to Relive Dance Studio & Fitness
+            </h1>
+            <p class="hero-subtitle">
+                movement meets memory
+            </p>
+            <p class="hero-description">
+                Discover your rhythm and unleash your potential at our premier dance academy.
+                Professional training in classical Indian dance forms and multiple dance styles for all skill levels.
+            </p>
+            <a href="#energy" class="hero-cta">
+                See The Energy
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div> -->
+    </section>
+
+    <!-- about us section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="studio-header">
+                <h1 class="studio-name">REL!VE</h1>
+                <h2 class="studio-tagline">YOURDANCEHOME</h2>
+            </div>
+
+            <div class="about-content">
+                <p>"REL!VE" is where movement meets memory. We help dancers relive their passion every time they step on
+                    stage. It's not just dance — it's revival. Energy. Expression. Legacy.</p>
+                <p>A space to dance. A place to feel. A studio to relive your best self through movement.
+                    Every beat tells a story. Every movement creates a memory. Every dancer finds their voice in the
+                    rhythm of revival.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Offer Section -->
+    <section id="offer" class="offer-section">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-subtitle">What We Offer</span>
+            <h2 class="section-title">Our Dance Programs</h2>
+        </div>
+        <div class="image-stack">
+            <a href="bollywood.html" class="image-container">
+                <img src="./public/1st image.jpg" alt="Bollywood Dance">
+                <div class="red-overlay"></div>
+                <div class="image-caption">Bollywood Dance</div>
+            </a>
+            <a href="semi-classical.html" class="image-container">
+                <img src="./public/2nd image.jpg" alt="Semi-Classical">
+                <div class="red-overlay"></div>
+                <div class="image-caption">Semi-Classical</div>
+            </a>
+            <a href="kids.html" class="image-container">
+                <img src="./public/3rd.jpg" alt="Kids Dance">
+                <div class="red-overlay"></div>
+                <div class="image-caption">Kids Dance</div>
+            </a>
+            <a href="yoga.html" class="image-container">
+                <img src="./public/4th.jpg" alt="Yoga">
+                <div class="red-overlay"></div>
+                <div class="image-caption">Yoga</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- See The Energy Section -->
+    <section id="energy" class="energy-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">See The Energy</span>
+                <h2 class="section-title">Experience the pulse of our studio</h2>
+            </div>
+
+            <div class="video-presentation" data-aos="fade-up" data-aos-delay="300">
+                <div class="video-container">
+                    <video id="energy-video" loop muted playsinline>
+                        <source src="./public/video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-overlay"></div>
+                    <div class="play-icon" id="play-button">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <div class="video-controls">
+                        <button class="control-btn" id="play-pause-btn"><i class="fas fa-play"></i></button>
+                        <input type="range" id="progress-bar" min="0" max="100" value="0">
+                        <button class="control-btn" id="mute-btn"><i class="fas fa-volume-up"></i></button>
+                        <button class="control-btn" id="fullscreen-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="video-highlights">
+                    <div class="highlight-item">
+                        <span class="highlight-number">500+</span>
+                        <span class="highlight-text">Sessions Monthly</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-number">24/7</span>
+                        <span class="highlight-text">Availability</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-number">10</span>
+                        <span class="highlight-text">Professional Studios</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Stories of Revival</span>
+                <h2 class="section-title">What Our Students Say</h2>
+            </div>
+
+            <div class="testimonials-container" data-aos="fade-up" data-aos-delay="300">
+                <div class="testimonial-slider">
+                    <div class="testimonial-slide active">
+                        <div class="testimonial-content">
+                            <div class="testimonial-text">
+                                "Relive Dance Studio has transformed my dancing completely. The instructors are amazing!"
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson">
+                                <div class="author-info">
+                                    <h4>Sarah Johnson</h4>
+                                    <p>Bollywood Student</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-text">
+                                "I've been to many studios, but the energy here is unmatched. My kids love their classes!"
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael Chen">
+                                <div class="author-info">
+                                    <h4>Michael Chen</h4>
+                                    <p>Parent</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-text">
+                                "The yoga classes have improved my flexibility and reduced my stress levels significantly."
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya Patel">
+                                <div class="author-info">
+                                    <h4>Priya Patel</h4>
+                                    <p>Yoga Student</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="testimonial-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 px-6 bg-gray-900/20">
+        <div class="max-w-7xl mx-auto">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Captured Moments</span>
+                <p class="text-xl text-gray-300">Every performance, every emotion, every beat preserved in time</p>
+            </div>
+            <div class="masonry-grid">
+                <div class="masonry-item relative group cursor-pointer">
+                    <img src="https://readdy.ai/api/search-image?query=professional%20dance%20performance%20on%20stage%20with%20dramatic%20lighting%2C%20contemporary%20dance%20pose%2C%20artistic%20composition%2C%20high%20energy%20movement%2C%20stage%20lights%2C%20performer%20in%20motion&width=400&height=600&seq=gallery-1&orientation=portrait"
+                        alt="Stage Performance" class="w-full rounded-lg">
+                    <div
+                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
+                        <span class="text-white font-semibold gallery-neon-glow">Stage Night 2024</span>
+                    </div>
+                </div>
+                <div class="masonry-item relative group cursor-pointer">
+                    <img src="https://readdy.ai/api/search-image?query=dance%20rehearsal%20in%20studio%2C%20multiple%20dancers%20practicing%20choreography%2C%20mirrors%20reflecting%20movement%2C%20professional%20dance%20training%20environment%2C%20warm%20lighting&width=400&height=300&seq=gallery-2&orientation=landscape"
+                        alt="Studio Rehearsal" class="w-full rounded-lg">
+                    <div
+                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
+                        <span class="text-white font-semibold gallery-neon-glow">Studio Sessions</span>
+                    </div>
+                </div>
+                <div class="masonry-item relative group cursor-pointer">
+                    <img src="https://readdy.ai/api/search-image?query=close%20up%20of%20dancer%20feet%20in%20dance%20shoes%2C%20artistic%20photography%2C%20dramatic%20lighting%2C%20dance%20studio%20floor%2C%20professional%20dance%20footwear%2C%20artistic%20composition&width=400&height=500&seq=gallery-3&orientation=portrait"
+                        alt="Dance Details" class="w-full rounded-lg">
+                    <div
+                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
+                        <span class="text-white font-semibold gallery-neon-glow">Every Detail</span>
+                    </div>
+                </div>
+                <div class="masonry-item relative group cursor-pointer">
+                    <img src="https://readdy.ai/api/search-image?query=group%20of%20dancers%20in%20synchronized%20movement%2C%20team%20choreography%2C%20professional%20dance%20company%2C%20artistic%20formation%2C%20stage%20performance%2C%20dynamic%20composition&width=400&height=400&seq=gallery-4&orientation=squarish"
+                        alt="Team Performance" class="w-full rounded-lg">
+                    <div
+                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
+                        <span class="text-white font-semibold gallery-neon-glow">Unity in Motion</span>
+                    </div>
+                </div>
+                <div class="masonry-item relative group cursor-pointer">
+                    <img src="https://readdy.ai/api/search-image?query=solo%20dancer%20in%20dramatic%20pose%2C%20contemporary%20dance%20expression%2C%20artistic%20lighting%2C%20emotional%20performance%2C%20professional%20dance%20photography%2C%20stage%20atmosphere&width=400&height=550&seq=gallery-5&orientation=portrait"
+                        alt="Solo Expression" class="w-full rounded-lg">
+                    <div
+                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
+                        <span class="text-white font-semibold gallery-neon-glow">Personal Journey</span>
+                    </div>
+                </div>
+                <div class="masonry-item relative group cursor-pointer">
+                    <img src="https://readdy.ai/api/search-image?query=backstage%20preparation%2C%20dancers%20getting%20ready%20for%20performance%2C%20behind%20the%20scenes%2C%20makeup%20and%20costumes%2C%20professional%20dance%20company%20preparation&width=400&height=350&seq=gallery-6&orientation=landscape"
+                        alt="Behind the Scenes" class="w-full rounded-lg">
+                    <div
+                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
+                        <span class="text-white font-semibold gallery-neon-glow">Behind the Magic</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-description">
+                    Ready to start your dance journey? Get in touch with us today.
+                    We're here to answer your questions and help you find the perfect program.
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Address</h3>
+                            <p>57/4, Sneh Sadan, Subhash Hotel lane, near J.B Nagar metro station, JB Nagar,
+                                Andheri East, Mumbai- 400059</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+91 8828571648</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>relivedanceandfitness@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 9:00 PM<br>
+                                Saturday: 8:00 AM - 6:00 PM<br>
+                                Sunday: 10:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" data-aos="fade-left" id="contact-form">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter Full Name" required>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="Enter Email Address" required>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter Phone Number">
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="">Select a subject...</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="classes">Class Information</option>
+                            <option value="enrollment">Enrollment</option>
+                            <option value="private">Private Lessons</option>
+                            <option value="events">Events & Performances</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required
+                            placeholder="Tell us about your dance goals, experience level, or any questions you have..."></textarea>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                        <div class="btn-loading">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                    </button>
+
+                    <div id="form-message" class="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Logo and About Section -->
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="./public/logo.jpeg" alt="Relive Dance & Fitness" class="footer-logo">
+                        <div>
+                            <h3 class="brand-name">Relive</h3>
+                            <p class="brand-tagline">Dance & Fitness</p>
+                        </div>
+                    </div>
+                    <p class="footer-about">
+                        Empowering dancers of all levels to express themselves through movement.
+                        Join our community and discover the joy of dance.
+                    </p>
+                    <div class="social-media">
+                        <a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="TikTok" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links Section -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="training.html" class="footer-link">Training Programs</a></li>
+                        <li><a href="classes.html" class="footer-link">Online Classes</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Programs Section -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="bollywood.html" class="footer-link">Bollywood Dance</a></li>
+                        <li><a href="semi-classical.html" class="footer-link">Semi-Classical</a></li>
+                        <li><a href="kids.html" class="footer-link">Kids Dance</a></li>
+                        <li><a href="yoga.html" class="footer-link">Yoga</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p class="contact-text">57/4, Sneh Sadan, Subhash Hotel lane, near J.B Nagar metro station,
+                                JB Nagar, Andheri East, Mumbai- 400059</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p class="contact-text">+91 8828571648</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p class="contact-text">relivedanceandfitness@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 Relive Dance & Fitness. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#" class="legal-link">Privacy Policy</a>
+                    <a href="#" class="legal-link">Terms of Service</a>
+                    <a href="#" class="legal-link">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/7499653616" class="whatsapp-float" target="_blank" rel="noopener"
+        aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <div class="whatsapp-tooltip">Chat with us</div>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
