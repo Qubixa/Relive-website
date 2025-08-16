@@ -470,3 +470,6 @@ function preloadImages() {
 
 // Initialize preloading after page load
 window.addEventListener('load', preloadImages);
+
+
+

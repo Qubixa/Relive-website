@@ -52,17 +52,19 @@
                     <li class="nav-item">
                         <a href="./aboutpage.html" class="nav-link">About Us</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a href="training.html" class="nav-link">Training Programs</a>
+                    </li> -->
+                      <li class="nav-item"> <a href="./Gallery.html" class="nav-link">Gallery</a></a>
                     </li>
                     <li class="nav-item dropdown">
                         <a href="classes.html" class="nav-link">Online Classes</a>
-                        <div class="dropdown-content">
+                        <!-- <div class="dropdown-content">
                             <a href="bollywood.html">Bollywood Dance Class</a>
                             <a href="semi-classical.html">Semi-Classical Dance Class</a>
                             <a href="kids.html">Kids Dance Class</a>
                             <a href="yoga.html">Yoga Class</a>
-                        </div>
+                        </div> -->
                     </li>
                     <li class="nav-item">
                         <a href="contact.html" class="nav-link">Contact</a>
@@ -134,34 +136,30 @@
     </section>
 
     <!-- What We Offer Section -->
-    <section id="offer" class="offer-section">
-        <div class="section-header" data-aos="fade-up">
-            <span class="section-subtitle">What We Offer</span>
-            <h2 class="section-title">Our Dance Programs</h2>
-        </div>
-        <div class="image-stack">
-            <a href="bollywood.html" class="image-container">
-                <img src="./public/1st image.jpg" alt="Bollywood Dance">
-                <div class="red-overlay"></div>
-                <div class="image-caption">Bollywood Dance</div>
-            </a>
-            <a href="semi-classical.html" class="image-container">
-                <img src="./public/2nd image.jpg" alt="Semi-Classical">
-                <div class="red-overlay"></div>
-                <div class="image-caption">Semi-Classical</div>
-            </a>
-            <a href="kids.html" class="image-container">
-                <img src="./public/3rd.jpg" alt="Kids Dance">
-                <div class="red-overlay"></div>
-                <div class="image-caption">Kids Dance</div>
-            </a>
-            <a href="yoga.html" class="image-container">
-                <img src="./public/4th.jpg" alt="Yoga">
-                <div class="red-overlay"></div>
-                <div class="image-caption">Yoga</div>
-            </a>
-        </div>
-    </section>
+   <section id="offer" class="offer-section">
+    <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">What We Offer</span>
+        <h2 class="section-title">Our Dance Programs</h2>
+    </div>
+    <div class="image-stack">
+        <a href="bollywood.html" class="image-container">
+            <img src="./public/Frame 2.png" alt="Bollywood Dance">
+            <div class="purple-overlay"></div>
+        </a>
+        <a href="Wedding.html" class="image-container">
+            <img src="./public/Frame 4.png" alt="Semi-Classical">
+            <div class="purple-overlay"></div>
+        </a>
+        <a href="./Onlineclassses.html" class="image-container">
+            <img src="./public/Frame 5.png" alt="Kids Dance">
+            <div class="purple-overlay"></div>
+        </a>
+        <a href="./onlineturtorial.html" class="image-container">
+            <img src="./public/Frame 6.png" alt="Yoga">
+            <div class="purple-overlay"></div>
+        </a>
+    </div>
+</section>
 
     <!-- See The Energy Section -->
     <section id="energy" class="energy-section">
@@ -174,7 +172,7 @@
             <div class="video-presentation" data-aos="fade-up" data-aos-delay="300">
                 <div class="video-container">
                     <video id="energy-video" loop muted playsinline>
-                        <source src="./public/video.mp4" type="video/mp4">
+                        <source src="./public/document_6091303329936185689.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <div class="video-overlay"></div>
@@ -209,130 +207,116 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-subtitle">Stories of Revival</span>
-                <h2 class="section-title">What Our Students Say</h2>
+     <section class="carousel-section">
+        <div class="section-header">
+            <span class="section-subtitle">Stories of Revival</span>
+            <h2 class="section-title">What Our Students Say</h2>
+        </div>
+        
+        <div class="carousel-container">
+            <!-- Navigation Arrows -->
+            <button class="carousel-nav nav-prev" onclick="changeSlide(-1)">‹</button>
+            <button class="carousel-nav nav-next" onclick="changeSlide(1)">›</button>
+
+            <!-- Testimonial Slides -->
+            <div class="testimonial-slide active">
+                <div class="profile-image">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b4c0?w=400&h=400&fit=crop&crop=face" alt="Amy S.">
+                </div>
+                <div class="testimonial-content">
+                    <p class="testimonial-text">
+                        With CLI Studios, I get to take classes in styles that I am a beginner in just because I enjoy them! When I am in my own space, there is no pressure in the room for anything but fun.
+                    </p>
+                    <h3 class="customer-name">AMY S.</h3>
+                </div>
             </div>
 
-            <div class="testimonials-container" data-aos="fade-up" data-aos-delay="300">
-                <div class="testimonial-slider">
-                    <div class="testimonial-slide active">
-                        <div class="testimonial-content">
-                            <div class="testimonial-text">
-                                "Relive Dance Studio has transformed my dancing completely. The instructors are amazing!"
-                            </div>
-                            <div class="testimonial-author">
-                                <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson">
-                                <div class="author-info">
-                                    <h4>Sarah Johnson</h4>
-                                    <p>Bollywood Student</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-slide">
-                        <div class="testimonial-content">
-                            <div class="testimonial-text">
-                                "I've been to many studios, but the energy here is unmatched. My kids love their classes!"
-                            </div>
-                            <div class="testimonial-author">
-                                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael Chen">
-                                <div class="author-info">
-                                    <h4>Michael Chen</h4>
-                                    <p>Parent</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-slide">
-                        <div class="testimonial-content">
-                            <div class="testimonial-text">
-                                "The yoga classes have improved my flexibility and reduced my stress levels significantly."
-                            </div>
-                            <div class="testimonial-author">
-                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya Patel">
-                                <div class="author-info">
-                                    <h4>Priya Patel</h4>
-                                    <p>Yoga Student</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="testimonial-slide">
+                <div class="profile-image">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="John M.">
                 </div>
-                <div class="testimonial-nav">
-                    <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
-                    <div class="testimonial-dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                    <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+                <div class="testimonial-content">
+                    <p class="testimonial-text">
+                        The quality of instruction is phenomenal. I've been able to improve my technique dramatically while learning from world-class instructors from the comfort of my home.
+                    </p>
+                    <h3 class="customer-name">JOHN M.</h3>
                 </div>
+            </div>
+
+            <div class="testimonial-slide">
+                <div class="profile-image">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face" alt="Sarah L.">
+                </div>
+                <div class="testimonial-content">
+                    <p class="testimonial-text">
+                        CLI Studios has transformed my dance journey. The flexibility to learn at my own pace while accessing professional-level content is exactly what I needed.
+                    </p>
+                    <h3 class="customer-name">SARAH L.</h3>
+                </div>
+            </div>
+
+            <div class="testimonial-slide">
+                <div class="profile-image">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face" alt="Mike R.">
+                </div>
+                <div class="testimonial-content">
+                    <p class="testimonial-text">
+                        Being able to access classes 24/7 has been game-changing for my busy schedule. The variety of styles and skill levels means there's always something new to explore.
+                    </p>
+                    <h3 class="customer-name">MIKE R.</h3>
+                </div>
+            </div>
+
+            <div class="testimonial-slide">
+                <div class="profile-image">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=400&fit=crop&crop=face" alt="Emma T.">
+                </div>
+                <div class="testimonial-content">
+                    <p class="testimonial-text">
+                        The community aspect combined with top-tier instruction creates an environment where you can truly grow as a dancer. It's like having a professional studio in your living room.
+                    </p>
+                    <h3 class="customer-name">EMMA T.</h3>
+                </div>
+            </div>
+
+            <div class="testimonial-slide">
+                <div class="profile-image">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face" alt="David K.">
+                </div>
+                <div class="testimonial-content">
+                    <p class="testimonial-text">
+                        CLI Studios has given me the confidence to try new dance styles without judgment. The instructors are encouraging and the progressive structure helps build skills naturally.
+                    </p>
+                    <h3 class="customer-name">DAVID K.</h3>
+                </div>
+            </div>
+
+            <div class="testimonial-slide">
+                <div class="profile-image">
+                    <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=400&h=400&fit=crop&crop=face" alt="Lisa P.">
+                </div>
+                <div class="testimonial-content">
+                    <p class="testimonial-text">
+                        What I love most is the ability to repeat classes until I perfect the moves. There's no rushing, no embarrassment - just pure learning and enjoyment of the art form.
+                    </p>
+                    <h3 class="customer-name">LISA P.</h3>
+                </div>
+            </div>
+
+            <!-- Dots Navigation -->
+            <div class="dots-container">
+                <button class="dot active" onclick="currentSlide(1)"></button>
+                <button class="dot" onclick="currentSlide(2)"></button>
+                <button class="dot" onclick="currentSlide(3)"></button>
+                <button class="dot" onclick="currentSlide(4)"></button>
+                <button class="dot" onclick="currentSlide(5)"></button>
+                <button class="dot" onclick="currentSlide(6)"></button>
+                <button class="dot" onclick="currentSlide(7)"></button>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-20 px-6 bg-gray-900/20">
-        <div class="max-w-7xl mx-auto">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-subtitle">Captured Moments</span>
-                <p class="text-xl text-gray-300">Every performance, every emotion, every beat preserved in time</p>
-            </div>
-            <div class="masonry-grid">
-                <div class="masonry-item relative group cursor-pointer">
-                    <img src="https://readdy.ai/api/search-image?query=professional%20dance%20performance%20on%20stage%20with%20dramatic%20lighting%2C%20contemporary%20dance%20pose%2C%20artistic%20composition%2C%20high%20energy%20movement%2C%20stage%20lights%2C%20performer%20in%20motion&width=400&height=600&seq=gallery-1&orientation=portrait"
-                        alt="Stage Performance" class="w-full rounded-lg">
-                    <div
-                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
-                        <span class="text-white font-semibold gallery-neon-glow">Stage Night 2024</span>
-                    </div>
-                </div>
-                <div class="masonry-item relative group cursor-pointer">
-                    <img src="https://readdy.ai/api/search-image?query=dance%20rehearsal%20in%20studio%2C%20multiple%20dancers%20practicing%20choreography%2C%20mirrors%20reflecting%20movement%2C%20professional%20dance%20training%20environment%2C%20warm%20lighting&width=400&height=300&seq=gallery-2&orientation=landscape"
-                        alt="Studio Rehearsal" class="w-full rounded-lg">
-                    <div
-                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
-                        <span class="text-white font-semibold gallery-neon-glow">Studio Sessions</span>
-                    </div>
-                </div>
-                <div class="masonry-item relative group cursor-pointer">
-                    <img src="https://readdy.ai/api/search-image?query=close%20up%20of%20dancer%20feet%20in%20dance%20shoes%2C%20artistic%20photography%2C%20dramatic%20lighting%2C%20dance%20studio%20floor%2C%20professional%20dance%20footwear%2C%20artistic%20composition&width=400&height=500&seq=gallery-3&orientation=portrait"
-                        alt="Dance Details" class="w-full rounded-lg">
-                    <div
-                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
-                        <span class="text-white font-semibold gallery-neon-glow">Every Detail</span>
-                    </div>
-                </div>
-                <div class="masonry-item relative group cursor-pointer">
-                    <img src="https://readdy.ai/api/search-image?query=group%20of%20dancers%20in%20synchronized%20movement%2C%20team%20choreography%2C%20professional%20dance%20company%2C%20artistic%20formation%2C%20stage%20performance%2C%20dynamic%20composition&width=400&height=400&seq=gallery-4&orientation=squarish"
-                        alt="Team Performance" class="w-full rounded-lg">
-                    <div
-                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
-                        <span class="text-white font-semibold gallery-neon-glow">Unity in Motion</span>
-                    </div>
-                </div>
-                <div class="masonry-item relative group cursor-pointer">
-                    <img src="https://readdy.ai/api/search-image?query=solo%20dancer%20in%20dramatic%20pose%2C%20contemporary%20dance%20expression%2C%20artistic%20lighting%2C%20emotional%20performance%2C%20professional%20dance%20photography%2C%20stage%20atmosphere&width=400&height=550&seq=gallery-5&orientation=portrait"
-                        alt="Solo Expression" class="w-full rounded-lg">
-                    <div
-                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
-                        <span class="text-white font-semibold gallery-neon-glow">Personal Journey</span>
-                    </div>
-                </div>
-                <div class="masonry-item relative group cursor-pointer">
-                    <img src="https://readdy.ai/api/search-image?query=backstage%20preparation%2C%20dancers%20getting%20ready%20for%20performance%2C%20behind%20the%20scenes%2C%20makeup%20and%20costumes%2C%20professional%20dance%20company%20preparation&width=400&height=350&seq=gallery-6&orientation=landscape"
-                        alt="Behind the Scenes" class="w-full rounded-lg">
-                    <div
-                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
-                        <span class="text-white font-semibold gallery-neon-glow">Behind the Magic</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
@@ -463,8 +447,8 @@
                     </p>
                     <div class="social-media">
                         <a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/relive_danceandfitness/?igsh=MTA2ZHRhZThyYW5lMw%3D%3D#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@relivedanceandfitness479?si=TtNhZ-L85W6vYfJi" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
                         <a href="#" aria-label="TikTok" class="social-link"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
