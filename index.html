@@ -13,6 +13,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Pacifico&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
         rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -34,99 +35,128 @@
     </div>
 
     <!-- Header & Navigation -->
-    <header class="header" id="header">
-        <nav class="nav">
-            <div class="nav-container">
+        <header class="header" id="header">
+            <nav class="nav">
+                <div class="nav-container">
                 <div class="nav-logo">
-                    <img src="./public/logo.jpeg" alt="Relive Dance Academy Logo">
-                    <div >
-                        <h2 class="neon-glow">REL!VE</h2>
-                        <span>Dance & Fitness Studio</span>
+                        <img src="./public/New_Logo__2_-removebg-preview.png" alt="Relive Dance Academy Logo">
+                    </div>
+
+                    <ul class="nav-menu" id="nav-menu">
+                        <li class="nav-item">
+                            <a href="./index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./aboutpage.html" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="classes.html" class="nav-link">Studio Class  <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-content">
+                                <a href="bollywood.html">Bollywood Dance</a>
+                                <a href="semi-classical.html">Semi-Classical Dance</a>
+                                <a href="Wedding.html">Wedding Choreography</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="classes.html" class="nav-link">Online Classes  <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-content">
+                                <a href="Pre-recoded">Pre-recoded video</a>
+                                <a href="Wedding.html">Online class</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./index.html" class="nav-link">Wedding choreography</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact Us</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav-toggle" id="nav-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 </div>
-
-                <ul class="nav-menu" id="nav-menu">
-                    <li class="nav-item">
-                        <a href="./index.html" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./aboutpage.html" class="nav-link">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="training.html" class="nav-link">Training Programs</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="classes.html" class="nav-link">Online Classes</a>
-                        <div class="dropdown-content">
-                            <a href="bollywood.html">Bollywood Dance Class</a>
-                            <a href="semi-classical.html">Semi-Classical Dance Class</a>
-                            <a href="kids.html">Kids Dance Class</a>
-                            <a href="yoga.html">Yoga Class</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a href="contact.html" class="nav-link">Contact</a>
-                    </li>
-                </ul>
-
-                <div class="nav-toggle" id="nav-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
+        
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-carousel">
-            <div class="carousel-container">
-                <div class="carousel-slide active"
-                    style="background-image: url('./public/Relive\ \(3\).png');">
-                    <div class="carousel-overlay"></div>
-                </div>
-                <div class="carousel-slide"
-                    style="background-image: url('./public/Relive\ \(4\).png');">
-                    <div class="carousel-overlay"></div>
-                </div>
-                <div class="carousel-slide"
-                    style="background-image: url('https://images.pexels.com/photos/3586966/pexels-photo-3586966.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
-                    <div class="carousel-overlay"></div>
-                </div>
+     <!-- <section id="home" class="hero">
+    <div class="hero-carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide active"
+                style="background-image: url('./public/Relive6.png');">
+                <div class="carousel-overlay"></div>
+            </div>
+            <div class="carousel-slide"
+                style="background-image: url('./public/Relive9.png');">
+                <div class="carousel-overlay"></div>
+            </div>
+            <div class="carousel-slide"
+                style="background-image: url('./public/Relive\ 7.png');">
+                <div class="carousel-overlay"></div>
             </div>
         </div>
+    </div>
+   <div class="hero-content">
+        <h1 class="hero-title">
+            <span class="welcome-text">Welcome to </span>
+            <span class="studio-name">The Dancing Abode</span>
+        </h1>
+        <p class="hero-subtext">Are you passionate about dance? Want to start your dancing journey?You've found your perfect rhythm</p>
+        <a href="#" class="cta-button">
+             Begin Your Journey
+            <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</section> -->
 
-        <!-- <div class="hero-content">
-            <h1 class="hero-title">
-                Welcome to Relive Dance Studio & Fitness
-            </h1>
-            <p class="hero-subtitle">
-                movement meets memory
-            </p>
-            <p class="hero-description">
-                Discover your rhythm and unleash your potential at our premier dance academy.
-                Professional training in classical Indian dance forms and multiple dance styles for all skill levels.
-            </p>
-            <a href="#energy" class="hero-cta">
-                See The Energy
-                <i class="fas fa-arrow-right"></i>
-            </a>
-        </div> -->
-    </section>
+<!-- new  -->
+
+<section id="home" class="hero">
+    <div class="hero-carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide active"
+                style="background-image: url('./public/Relive6.png');">
+                <div class="carousel-overlay"></div>
+            </div>
+            <div class="carousel-slide"
+                style="background-image: url('./public/Relive9.png');">
+                <div class="carousel-overlay"></div>
+            </div>
+            <div class="carousel-slide"
+                style="background-image: url('./public/Relive\ 7.png');">
+                <div class="carousel-overlay"></div>
+            </div>
+        </div>
+    </div>
+   <div class="hero-content">
+        <h1 class="hero-title">
+            <span class="welcome-text">Welcome to</span>
+            <span class="hero-studio-name">The Dancing Abode</span>
+        </h1>
+        <p class="hero-subtext">Are you passionate about dance? Want to start your dancing journey? You've found your perfect rhythm</p>
+        <a href="#" class="cta-button">
+             Begin Your Journey
+            <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</section>
 
     <!-- about us section -->
     <section id="about" class="about-section">
         <div class="about-container">
             <div class="studio-header">
-                <h1 class="studio-name">REL!VE</h1>
-                <h2 class="studio-tagline">YOURDANCEHOME</h2>
+                <h1 class="studio-name">REL!VE Dance & Fitness</h1>
+                <h2 class="studio-tagline">YOUR DANCE HOME</h2>
             </div>
 
             <div class="about-content">
-                <p>"REL!VE" is where movement meets memory. We help dancers relive their passion every time they step on
+                <p>"REL!VE Dance & Fitness" is where movement meets memory. We help dancers relive their passion every time they step on
                     stage. It's not just dance — it's revival. Energy. Expression. Legacy.</p>
-                <p>A space to dance. A place to feel. A studio to relive your best self through movement.
+                <p>A space to dance. A place to feel. A platform to relive your best self through movement.
                     Every beat tells a story. Every movement creates a memory. Every dancer finds their voice in the
                     rhythm of revival.</p>
             </div>
@@ -134,212 +164,379 @@
     </section>
 
     <!-- What We Offer Section -->
-    <section id="offer" class="offer-section">
-        <div class="section-header" data-aos="fade-up">
-            <span class="section-subtitle">What We Offer</span>
-            <h2 class="section-title">Our Dance Programs</h2>
-        </div>
-        <div class="image-stack">
-            <a href="bollywood.html" class="image-container">
-                <img src="./public/1st image.jpg" alt="Bollywood Dance">
-                <div class="red-overlay"></div>
-                <div class="image-caption">Bollywood Dance</div>
-            </a>
-            <a href="semi-classical.html" class="image-container">
-                <img src="./public/2nd image.jpg" alt="Semi-Classical">
-                <div class="red-overlay"></div>
-                <div class="image-caption">Semi-Classical</div>
-            </a>
-            <a href="kids.html" class="image-container">
-                <img src="./public/3rd.jpg" alt="Kids Dance">
-                <div class="red-overlay"></div>
-                <div class="image-caption">Kids Dance</div>
-            </a>
-            <a href="yoga.html" class="image-container">
-                <img src="./public/4th.jpg" alt="Yoga">
-                <div class="red-overlay"></div>
-                <div class="image-caption">Yoga</div>
-            </a>
-        </div>
-    </section>
+   <!-- <section id="offer" class="offer-section">
+    <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">What We Offer</span>
+    </div>
+    <div class="image-stack">
+        <a href="bollywood.html" class="image-container">
+            <img src="./public/Frame 7.png" alt="Bollywood Dance">
+            <h2>In Studio classes</h2>
+            <div class="purple-overlay"></div>
+        </a>
+        <a href="Wedding.html" class="image-container">
+            <img src="./public/Frame 8.png" alt="Semi-Classical">
+             <h2>Online classes</h2>
+            <div class="purple-overlay"></div>
+        </a>
+        <a href="./Onlineclassses.html" class="image-container">
+            <img src="./public/Frame 9.png" alt="Kids Dance">
+             <h2>Pre-recorded Class</h2>
+            <div class="purple-overlay"></div>
+        </a>
+        <a href="./onlineturtorial.html" class="image-container">
+            <img src="./public/Frame 10.png" alt="Yoga">
+             <h2>wedding choreography</h2>
+            <div class="purple-overlay"></div>
+        </a>
+    </div>
+</section> -->
 
+<section id="offer" class="offer-section">
+    <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">What We Offer</span>
+    </div>
+    <div class="image-stack">
+        <a href="bollywood.html" class="image-container">
+            <div class="content-box ">
+                <h2>Studio classes</h2>
+                <div class="underline"></div>
+            </div>
+        </a>
+        <a href="Wedding.html" class="image-container">
+            <div class="content-box ">
+                <h2>Online classes</h2>
+                <div class="underline"></div>
+            </div>
+        </a>
+        <a href="./Onlineclassses.html" class="image-container">
+            <div class="content-box ">
+                <h2>Pre-Recorded Class</h2>
+                <div class="underline"></div>
+            </div>
+        </a>
+        <a href="./onlineturtorial.html" class="image-container">
+            <div class="content-box">
+                <h2>Wedding Choreography</h2>
+                <div class="underline"></div>
+            </div>
+        </a>
+    </div>
+</section>
     <!-- See The Energy Section -->
-    <section id="energy" class="energy-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-subtitle">See The Energy</span>
-                <h2 class="section-title">Experience the pulse of our studio</h2>
+   <section class="youtube-carousel-section">
+        <div class="section-header">
+            <span class="section-subtitle">Relive Dance & Fitness on YouTube</span>
+            <!-- <h2 class="section-description">Experience the pulse of our studio</h2> -->
+        </div>
+        
+        <!-- <div class="carousel-wrapper">
+            <div class="carousel">
+                <div class="carousel-item left" onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')">
+                    <div class="thumbnail-image" style="background-image: url('https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80')">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-title">Dance Studio Tour - See Our Amazing Facilities</div>
+                        <div class="video-channel">CLI Studios</div>
+                    </div>
+                </div>
+                
+                <div class="carousel-item center" onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')">
+                    <div class="thumbnail-image" style="background-image: url('https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80')">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-title">Behind the Scenes - A Day at CLI Studios</div>
+                        <div class="video-channel">CLI Studios</div>
+                    </div>
+                </div>
+                
+                <div class="carousel-item right" onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')">
+                    <div class="thumbnail-image" style="background-image: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80')">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-title">Student Performance Highlights - Spring Recital</div>
+                        <div class="video-channel">CLI Studios</div>
+                    </div>
+                </div>
             </div>
+        </div> -->
 
-            <div class="video-presentation" data-aos="fade-up" data-aos-delay="300">
-                <div class="video-container">
-                    <video id="energy-video" loop muted playsinline>
-                        <source src="./public/video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="video-overlay"></div>
-                    <div class="play-icon" id="play-button">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z" fill="currentColor" />
-                        </svg>
-                    </div>
-                    <div class="video-controls">
-                        <button class="control-btn" id="play-pause-btn"><i class="fas fa-play"></i></button>
-                        <input type="range" id="progress-bar" min="0" max="100" value="0">
-                        <button class="control-btn" id="mute-btn"><i class="fas fa-volume-up"></i></button>
-                        <button class="control-btn" id="fullscreen-btn"><i class="fas fa-expand"></i></button>
-                    </div>
+        <div class="carousel-wrapper">
+    <div class="carousel">
+        <div class="carousel-item left" onclick="window.open('https://youtube.com/shorts/zmTqu8Tn4Qc?si=rZQwEtMKNP4TFS0J', '_blank')">
+            <div class="thumbnail-image" style="background-image: url('./images/Semi-classical.png')">
+                <div class="play-button">
+                    <i class="fas fa-play"></i>
                 </div>
-                <div class="video-highlights">
-                    <div class="highlight-item">
-                        <span class="highlight-number">500+</span>
-                        <span class="highlight-text">Sessions Monthly</span>
-                    </div>
-                    <div class="highlight-item">
-                        <span class="highlight-number">24/7</span>
-                        <span class="highlight-text">Availability</span>
-                    </div>
-                    <div class="highlight-item">
-                        <span class="highlight-number">10</span>
-                        <span class="highlight-text">Professional Studios</span>
-                    </div>
-                </div>
+            </div>
+            <div class="video-info">
+                <div class="video-title">Semiclassical Dance Tutorial - Perfect Your Moves</div>
+                <div class="video-channel">Relive Dance & Fitness</div>
             </div>
         </div>
+        
+        <div class="carousel-item center" onclick="window.open('https://youtube.com/shorts/Ii9KHnSFyMM?si=En_j93_qcTptsSjb', '_blank')">
+            <div class="thumbnail-image" style="background-image: url('./images/wedding1\ \(1\)\ 2.png')">
+                <div class="play-button">
+                    <i class="fas fa-play"></i>
+                </div>
+            </div>
+            <div class="video-info">
+                <div class="video-title">Bollywood Dance Workout - Fun & Energetic</div>
+                <div class="video-channel">Relive Dance & Fitness</div>
+            </div>
+        </div>
+        
+        <div class="carousel-item right" onclick="window.open('https://youtube.com/shorts/WQJT7EJ85VM?si=RJk_uYp85clj7u64', '_blank')">
+            <div class="thumbnail-image" style="background-image: url('./images/wedding7\ 1.png')">
+                <div class="play-button">
+                    <i class="fas fa-play"></i>
+                </div>
+            </div>
+            <div class="video-info">
+                <div class="video-title">Group Class Highlights - Energy & Community</div>
+                <div class="video-channel">Relive Dance & Fitness</div>
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+        
+        <div class="carousel-nav">
+            <button class="nav-dot" data-index="0"></button>
+            <button class="nav-dot active" data-index="1"></button>
+            <button class="nav-dot" data-index="2"></button>
+        </div>
+        
+        <div class="carousel-controls">
+            <button class="control-btn prev-btn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="control-btn next-btn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <div class="youtube-logo" onclick="window.open('https://youtube.com/@ashwinisoni3272?si=Ghil25xBEPZNZYa1', '_blank')">
+            <img src="https://www.freepnglogos.com/uploads/youtube-play-red-logo-png-transparent-background-6.png" alt="YouTube">
+        </div>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const items = document.querySelectorAll('.carousel-item');
+            const dots = document.querySelectorAll('.nav-dot');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            
+            let currentPosition = 1; // Center position
+            
+            // Function to update carousel position
+            function updateCarousel() {
+                // Remove active class from all dots
+                dots.forEach(dot => dot.classList.remove('active'));
+                
+                // Add active class to current dot
+                dots[currentPosition].classList.add('active');
+                
+                // Update item classes
+                items.forEach((item, index) => {
+                    item.classList.remove('left', 'center', 'right');
+                    item.style.opacity = '1';
+                    item.style.pointerEvents = 'auto';
+                    
+                    if (index === currentPosition) {
+                        item.classList.add('center');
+                    } else if (index === (currentPosition - 1 + items.length) % items.length) {
+                        item.classList.add('left');
+                    } else if (index === (currentPosition + 1) % items.length) {
+                        item.classList.add('right');
+                    } else {
+                        // Hide others
+                        item.style.opacity = '0';
+                        item.style.pointerEvents = 'none';
+                    }
+                });
+            }
+            
+            // Next button event
+            nextBtn.addEventListener('click', function() {
+                currentPosition = (currentPosition + 1) % items.length;
+                updateCarousel();
+            });
+            
+            // Previous button event
+            prevBtn.addEventListener('click', function() {
+                currentPosition = (currentPosition - 1 + items.length) % items.length;
+                updateCarousel();
+            });
+            
+            // Dot navigation events
+            dots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    currentPosition = parseInt(this.getAttribute('data-index'));
+                    updateCarousel();
+                });
+            });
+            
+            // Auto-rotate carousel
+            setInterval(() => {
+                currentPosition = (currentPosition + 1) % items.length;
+                updateCarousel();
+            }, 5000);
+            
+            // Initialize carousel
+            updateCarousel();
+        });
+    </script>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-subtitle">Stories of Revival</span>
-                <h2 class="section-title">What Our Students Say</h2>
+  <section class="test-carousel-section">
+    <div class="test-section-header">
+        <span class="test-section-subtitle">Stories of Revival</span>
+        <h2 class="test-section-title">What Our Students Say</h2>
+    </div>
+    
+    <div class="test-carousel-container">
+        <div class="test-carousel-content">
+            <button class="test-carousel-nav test-nav-prev">‹</button>
+            
+            <div class="test-testimonial-slide test-active">
+                <div class="test-testimonial-content">
+                    <p class="test-testimonial-text">
+                        "With CLI Studios, I get to take classes in styles that I am a beginner in just because I enjoy them! When I am in my own space, there is no pressure in the room for anything but fun."
+                    </p>
+                    <h3 class="test-customer-name">AMY S.</h3>
+                </div>
             </div>
 
-            <div class="testimonials-container" data-aos="fade-up" data-aos-delay="300">
-                <div class="testimonial-slider">
-                    <div class="testimonial-slide active">
-                        <div class="testimonial-content">
-                            <div class="testimonial-text">
-                                "Relive Dance Studio has transformed my dancing completely. The instructors are amazing!"
-                            </div>
-                            <div class="testimonial-author">
-                                <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson">
-                                <div class="author-info">
-                                    <h4>Sarah Johnson</h4>
-                                    <p>Bollywood Student</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-slide">
-                        <div class="testimonial-content">
-                            <div class="testimonial-text">
-                                "I've been to many studios, but the energy here is unmatched. My kids love their classes!"
-                            </div>
-                            <div class="testimonial-author">
-                                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael Chen">
-                                <div class="author-info">
-                                    <h4>Michael Chen</h4>
-                                    <p>Parent</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-slide">
-                        <div class="testimonial-content">
-                            <div class="testimonial-text">
-                                "The yoga classes have improved my flexibility and reduced my stress levels significantly."
-                            </div>
-                            <div class="testimonial-author">
-                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya Patel">
-                                <div class="author-info">
-                                    <h4>Priya Patel</h4>
-                                    <p>Yoga Student</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-nav">
-                    <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
-                    <div class="testimonial-dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                    <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+            <div class="test-testimonial-slide">
+                <div class="test-testimonial-content">
+                    <p class="test-testimonial-text">
+                        "The quality of instruction is phenomenal. I've been able to improve my technique dramatically while learning from world-class instructors from the comfort of my home."
+                    </p>
+                    <h3 class="test-customer-name">JOHN M.</h3>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-20 px-6 bg-gray-900/20">
-        <div class="max-w-7xl mx-auto">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-subtitle">Captured Moments</span>
-                <p class="text-xl text-gray-300">Every performance, every emotion, every beat preserved in time</p>
-            </div>
-            <div class="masonry-grid">
-                <div class="masonry-item relative group cursor-pointer">
-                    <img src="https://readdy.ai/api/search-image?query=professional%20dance%20performance%20on%20stage%20with%20dramatic%20lighting%2C%20contemporary%20dance%20pose%2C%20artistic%20composition%2C%20high%20energy%20movement%2C%20stage%20lights%2C%20performer%20in%20motion&width=400&height=600&seq=gallery-1&orientation=portrait"
-                        alt="Stage Performance" class="w-full rounded-lg">
-                    <div
-                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
-                        <span class="text-white font-semibold gallery-neon-glow">Stage Night 2024</span>
-                    </div>
-                </div>
-                <div class="masonry-item relative group cursor-pointer">
-                    <img src="https://readdy.ai/api/search-image?query=dance%20rehearsal%20in%20studio%2C%20multiple%20dancers%20practicing%20choreography%2C%20mirrors%20reflecting%20movement%2C%20professional%20dance%20training%20environment%2C%20warm%20lighting&width=400&height=300&seq=gallery-2&orientation=landscape"
-                        alt="Studio Rehearsal" class="w-full rounded-lg">
-                    <div
-                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
-                        <span class="text-white font-semibold gallery-neon-glow">Studio Sessions</span>
-                    </div>
-                </div>
-                <div class="masonry-item relative group cursor-pointer">
-                    <img src="https://readdy.ai/api/search-image?query=close%20up%20of%20dancer%20feet%20in%20dance%20shoes%2C%20artistic%20photography%2C%20dramatic%20lighting%2C%20dance%20studio%20floor%2C%20professional%20dance%20footwear%2C%20artistic%20composition&width=400&height=500&seq=gallery-3&orientation=portrait"
-                        alt="Dance Details" class="w-full rounded-lg">
-                    <div
-                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
-                        <span class="text-white font-semibold gallery-neon-glow">Every Detail</span>
-                    </div>
-                </div>
-                <div class="masonry-item relative group cursor-pointer">
-                    <img src="https://readdy.ai/api/search-image?query=group%20of%20dancers%20in%20synchronized%20movement%2C%20team%20choreography%2C%20professional%20dance%20company%2C%20artistic%20formation%2C%20stage%20performance%2C%20dynamic%20composition&width=400&height=400&seq=gallery-4&orientation=squarish"
-                        alt="Team Performance" class="w-full rounded-lg">
-                    <div
-                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
-                        <span class="text-white font-semibold gallery-neon-glow">Unity in Motion</span>
-                    </div>
-                </div>
-                <div class="masonry-item relative group cursor-pointer">
-                    <img src="https://readdy.ai/api/search-image?query=solo%20dancer%20in%20dramatic%20pose%2C%20contemporary%20dance%20expression%2C%20artistic%20lighting%2C%20emotional%20performance%2C%20professional%20dance%20photography%2C%20stage%20atmosphere&width=400&height=550&seq=gallery-5&orientation=portrait"
-                        alt="Solo Expression" class="w-full rounded-lg">
-                    <div
-                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
-                        <span class="text-white font-semibold gallery-neon-glow">Personal Journey</span>
-                    </div>
-                </div>
-                <div class="masonry-item relative group cursor-pointer">
-                    <img src="https://readdy.ai/api/search-image?query=backstage%20preparation%2C%20dancers%20getting%20ready%20for%20performance%2C%20behind%20the%20scenes%2C%20makeup%20and%20costumes%2C%20professional%20dance%20company%20preparation&width=400&height=350&seq=gallery-6&orientation=landscape"
-                        alt="Behind the Scenes" class="w-full rounded-lg">
-                    <div
-                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
-                        <span class="text-white font-semibold gallery-neon-glow">Behind the Magic</span>
-                    </div>
+            <div class="test-testimonial-slide">
+                <div class="test-testimonial-content">
+                    <p class="test-testimonial-text">
+                        "CLI Studios has transformed my dance journey. The flexibility to learn at my own pace while accessing professional-level content is exactly what I needed."
+                    </p>
+                    <h3 class="test-customer-name">SARAH L.</h3>
                 </div>
             </div>
+            
+            <button class="test-carousel-nav test-nav-next">›</button>
         </div>
-    </section>
+    </div>
+    
+    <div class="test-dots-container">
+        <button class="test-dot test-active"></button>
+        <button class="test-dot"></button>
+        <button class="test-dot"></button>
+    </div>
+</section>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.test-testimonial-slide');
+        const dots = document.querySelectorAll('.test-dot');
+        const prevBtn = document.querySelector('.test-nav-prev');
+        const nextBtn = document.querySelector('.test-nav-next');
+        let slideInterval;
+
+        // Function to show a specific slide
+        function showSlide(n) {
+            // Hide all slides and remove active class from dots
+            slides.forEach(slide => slide.classList.remove('test-active'));
+            dots.forEach(dot => dot.classList.remove('test-active'));
+            
+            // Update current slide index with proper cycling
+            currentSlide = n;
+            
+            // Handle cycling for continuous loop
+            if (currentSlide >= slides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+            
+            // Show the current slide and activate corresponding dot
+            slides[currentSlide].classList.add('test-active');
+            dots[currentSlide].classList.add('test-active');
+        }
+
+        // Function to move to next slide
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        // Function to move to previous slide
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // Set up auto-sliding
+        function startSlideShow() {
+            slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+        }
+
+        // Stop auto-sliding
+        function stopSlideShow() {
+            clearInterval(slideInterval);
+        }
+
+        // Event listeners for navigation buttons
+        nextBtn.addEventListener('click', function() {
+            stopSlideShow();
+            nextSlide();
+            startSlideShow();
+        });
+
+        prevBtn.addEventListener('click', function() {
+            stopSlideShow();
+            prevSlide();
+            startSlideShow();
+        });
+
+        // Event listeners for dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                stopSlideShow();
+                showSlide(index);
+                startSlideShow();
+            });
+        });
+
+        // Initialize the carousel
+        showSlide(currentSlide);
+        startSlideShow();
+
+        // Pause slideshow when user hovers over carousel
+        const carousel = document.querySelector('.test-carousel-container');
+        carousel.addEventListener('mouseenter', stopSlideShow);
+        carousel.addEventListener('mouseleave', startSlideShow);
+    });
+</script>
+
+  
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <span class="section-subtitle">Get In Touch</span>
-                <h2 class="section-title">Contact Us</h2>
                 <p class="section-description">
                     Ready to start your dance journey? Get in touch with us today.
                     We're here to answer your questions and help you find the perfect program.
@@ -378,18 +575,6 @@
                             <p>relivedanceandfitness@gmail.com</p>
                         </div>
                     </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Hours</h3>
-                            <p>Monday - Friday: 9:00 AM - 9:00 PM<br>
-                                Saturday: 8:00 AM - 6:00 PM<br>
-                                Sunday: 10:00 AM - 4:00 PM</p>
-                        </div>
-                    </div>
                 </div>
 
                 <form class="contact-form" data-aos="fade-left" id="contact-form">
@@ -406,7 +591,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="phone">Phone Number</label>
+                        <label for="phone">Phone Number *</label>
                         <input type="tel" id="phone" name="phone" placeholder="Enter Phone Number">
                         <span class="error-message"></span>
                     </div>
@@ -414,17 +599,17 @@
                     <div class="form-group">
                         <label for="subject">Subject</label>
                         <select id="subject" name="subject">
-                            <option value="">Select a subject...</option>
-                            <option value="general">General Inquiry</option>
-                            <option value="classes">Class Information</option>
-                            <option value="enrollment">Enrollment</option>
-                            <option value="private">Private Lessons</option>
-                            <option value="events">Events & Performances</option>
+                            <!-- <option value="">Select a subject...</option> -->
+                            <option value="">I Want Know About...</option>
+                            <option value="">Bollywood Dance</option>
+                            <option value="">Semi-Classical Dance</option>
+                            <option value="">Pre-recoded Class</option>
+                            <option value="">Wedding Choreography</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="message">Message *</label>
+                        <label for="message">Message (Optional)</label>
                         <textarea id="message" name="message" rows="5" required
                             placeholder="Tell us about your dance goals, experience level, or any questions you have..."></textarea>
                         <span class="error-message"></span>
@@ -451,11 +636,8 @@
                 <!-- Logo and About Section -->
                 <div class="footer-section">
                     <div class="footer-brand">
-                        <img src="./public/logo.jpeg" alt="Relive Dance & Fitness" class="footer-logo">
-                        <div>
-                            <h3 class="brand-name">Relive</h3>
-                            <p class="brand-tagline">Dance & Fitness</p>
-                        </div>
+                        <img src="./public/New_Logo__2_-removebg-preview.png" alt="Relive Dance & Fitness" class="footer-logo">
+                        
                     </div>
                     <p class="footer-about">
                         Empowering dancers of all levels to express themselves through movement.
@@ -463,9 +645,8 @@
                     </p>
                     <div class="social-media">
                         <a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
-                        <a href="#" aria-label="TikTok" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/relive_danceandfitness/?igsh=MTA2ZHRhZThyYW5lMw%3D%3D#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@relivedanceandfitness479?si=TtNhZ-L85W6vYfJi" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
 
@@ -474,10 +655,10 @@
                     <h4 class="footer-heading">Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="index.html" class="footer-link">Home</a></li>
-                        <li><a href="about.html" class="footer-link">About Us</a></li>
-                        <li><a href="training.html" class="footer-link">Training Programs</a></li>
+                        <li><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="training.html" class="footer-link">Studio Class</a></li>
                         <li><a href="classes.html" class="footer-link">Online Classes</a></li>
-                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
                     </ul>
                 </div>
 
@@ -487,8 +668,8 @@
                     <ul class="footer-links">
                         <li><a href="bollywood.html" class="footer-link">Bollywood Dance</a></li>
                         <li><a href="semi-classical.html" class="footer-link">Semi-Classical</a></li>
-                        <li><a href="kids.html" class="footer-link">Kids Dance</a></li>
-                        <li><a href="yoga.html" class="footer-link">Yoga</a></li>
+                        <li><a href="" class="footer-link">Wedding Choreography</a></li>
+                        <li><a href="yoga.html" class="footer-link">Yoga Class</a></li>
                     </ul>
                 </div>
 
@@ -525,12 +706,20 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/7499653616" class="whatsapp-float" target="_blank" rel="noopener"
-        aria-label="Contact us on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-        <div class="whatsapp-tooltip">Chat with us</div>
+   <!-- Pre-recorded Classes Floating Button -->
+    <a href="./Pre-recoded" class="prerecorded-float" aria-label="Pre-recorded classes">
+        <div class="star-text">What's New</div>
     </a>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/8828571648" class="whatsapp-float" target="_blank" rel="noopener"
+    aria-label="Contact us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <div class="whatsapp-tooltip">Chat with us</div>
+</a>
+    
+
+    
 
     <!-- Back to Top Button -->
     <button id="back-to-top" class="back-to-top" aria-label="Back to top">

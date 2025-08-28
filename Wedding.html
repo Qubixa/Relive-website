@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding - Relive Dance & Fitness Studio</title>
+    <meta name="description" content="Discover the story behind Relive Dance & Fitness Studio - Where movement meets memory. Professional dance training in Mumbai.">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Pacifico&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+ <style>
+    /* Color Variables */
+    :root {
+        --purple-primary: #9c27b0;
+        --purple-secondary: #7b1fa2;
+        --purple-light: #ba68c8;
+        --purple-dark: #6a1b9a;
+        --text-light: #ffffff;
+        --text-dark: #333333;
+        --bg-dark: #121212;
+        --bg-darker: #0a0a0a;
+        --card-bg: #1e1e1e;
+        --border-color: #333333;
+    }
+
+    /* Wedding Hero Section */
+    .wedding-hero {
+        position: relative;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        background: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .wedding-hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(156, 39, 176, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%);
+    }
+
+    .wedding-hero .container {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+    }
+
+    .wedding-hero h1 {
+        font-size: 4.5rem;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+        font-family: 'Playfair', serif;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .wedding-hero p {
+        font-size: 1.8rem;
+        font-weight: 300;
+        margin-bottom: 2rem;
+        line-height: 1.4;
+    }
+
+    
+    .wedding-hero-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        background: var(--purple-secondary);
+    }
+
+    /* Wedding Services Section - Dark Theme */
+    .wedding-services {
+        padding: 100px 0;
+        background: var(--bg-dark);
+    }
+
+    .wedding-section-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .wedding-section-header h2 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: var(--text-light);
+        margin-bottom: 1rem;
+        font-family: 'Playfair', serif;
+        position: relative;
+        display: inline-block;
+    }
+
+    .wedding-section-header h2:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: var(--purple-primary);
+    }
+
+    .wedding-section-header p {
+        font-size: 1.2rem;
+        color: #aaaaaa;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .service-card {
+        background: var(--card-bg);
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        transition: all 0.4s ease;
+        position: relative;
+        border: 1px solid var(--border-color);
+    }
+
+    .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .service-image {
+        height: 250px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .service-image img {
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .service-card:hover .service-image img {
+        transform: scale(1.05);
+    }
+
+    .service-content {
+        padding: 25px;
+    }
+
+    .service-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--text-light);
+        margin-bottom: 15px;
+        font-family: 'Playfair', serif;
+    }
+
+    .service-description {
+        color: #bbbbbb;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+    .service-features {
+        list-style: none;
+        margin-bottom: 25px;
+    }
+
+    .service-features li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        color: #aaaaaa;
+    }
+
+    .service-features i {
+        color: var(--purple-light);
+        font-size: 0.9rem;
+    }
+
+    .service-price {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--purple-light);
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    .service-btn {
+        width: 100%;
+        background: var(--purple-primary);
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .service-btn:hover {
+        background: var(--purple-secondary);
+    }
+
+    /* Wedding Gallery Section - Dark Theme */
+    .wedding-gallery {
+        padding: 100px 0;
+        background: var(--bg-dark);
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .gallery-item {
+        position: relative;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        border: 1px solid var(--border-color);
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.05);
+    }
+
+    .gallery-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+        display: flex;
+        align-items: flex-end;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        padding: 20px;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+        opacity: 1;
+    }
+
+    .gallery-caption {
+        color: white;
+        transform: translateY(20px);
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover .gallery-caption {
+        transform: translateY(0);
+    }
+
+    .gallery-caption h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    .gallery-caption p {
+        font-size: 0.9rem;
+        opacity: 0.8;
+    }
+
+    /* Testimonials Section - Dark Theme */
+    .wedding-testimonials {
+        padding: 100px 0;
+        background: var(--bg-darker);
+        text-align: center;
+        color: white;
+    }
+
+    .testimonial-card {
+        background: var(--card-bg);
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+        border: 1px solid var(--border-color);
+    }
+
+    .testimonial-card:before {
+        content: '"';
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        font-size: 5rem;
+        color: rgba(156, 39, 176, 0.2);
+        font-family: serif;
+        line-height: 1;
+    }
+
+    .testimonial-text {
+        font-size: 1.2rem;
+        color: #eeeeee;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        font-style: italic;
+    }
+
+    .author-info h4 {
+        font-size: 1.2rem;
+        color: white;
+        margin-bottom: 5px;
+    }
+
+    .author-info p {
+        color: #bbbbbb;
+        font-size: 0.9rem;
+    }
+
+    /* CTA Section - Dark Theme */
+    .wedding-cta {
+        padding: 100px 0;
+        background: linear-gradient(135deg, var(--purple-dark) 0%, var(--bg-darker) 100%);
+        color: white;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .wedding-cta:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+        background-size: cover;
+        opacity: 0.15;
+        z-index: 0;
+    }
+
+    .wedding-cta .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .wedding-cta h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        font-family: 'Playfair', serif;
+        text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+
+    .wedding-cta p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto 30px;
+        line-height: 1.6;
+        color: #dddddd;
+    }
+
+    .cta-btn {
+        background: var(--purple-primary);
+        color: white;
+        border: none;
+        padding: 15px 40px;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        position: relative;
+        z-index: 1;
+    }
+
+    .cta-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        background: var(--purple-secondary);
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .wedding-hero h1 {
+            font-size: 3rem;
+        }
+        
+        .wedding-hero p {
+            font-size: 1.4rem;
+        }
+        
+        .wedding-section-header h2 {
+            font-size: 2.2rem;
+        }
+        
+        .service-image {
+            height: 200px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .wedding-hero {
+            height: 70vh;
+        }
+        
+        .wedding-hero h1 {
+            font-size: 2.5rem;
+        }
+        
+        .wedding-hero p {
+            font-size: 1.2rem;
+        }
+        
+        .services-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+<body>
+ 
+
+    <!-- Header & Navigation -->
+      <header class="header" id="header">
+        <nav class="nav">
+            <div class="nav-container">
+               <div class="nav-logo">
+                    <img src="./public/New_Logo__2_-removebg-preview.png" alt="Relive Dance Academy Logo">
+                </div>
+
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./aboutpage.html" class="nav-link">About</a>
+                    </li>
+                     <li class="nav-item dropdown">
+                        <a href="classes.html" class="nav-link">Studio Class</a>
+                        <div class="dropdown-content">
+                            <a href="bollywood.html">Bollywood Dance</a>
+                            <a href="semi-classical.html">Semi-Classical Dance</a>
+                            <a href="Wedding.html">Wedding Choreography</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="classes.html" class="nav-link">Online Classes</a>
+                        <div class="dropdown-content">
+                            <a href="Pre-recoded">Pre-recoded video</a>
+                            <a href="Wedding.html">Online class</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link">Wedding choreography</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="wedding-hero">
+        <div class="wedding-hero-overlay"></div>
+        <div class="container">
+            <div data-aos="fade-up" data-aos-duration="800">
+                <h1>Wedding Choreography</h1>
+                <p>Create unforgettable moments with your perfect first dance</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wedding Services Section -->
+    <section class="wedding-services">
+        <div class="container">
+            <div class="wedding-section-header" data-aos="fade-up">
+                <h2>Our Wedding Services</h2>
+                <p>We specialize in creating magical dance moments for your wedding celebrations. From intimate first dances to grand sangeet performances, we'll make your wedding unforgettable.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- First Dance Choreography -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-image">
+                        <img src="./public/wedding1 (1).jpg" alt="First Dance Choreography">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">First Dance Choreography</h3>
+                        <p class="service-description">Custom choreography tailored to your song, skill level, and vision for that perfect first dance as a married couple.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Personalized routine</li>
+                            <li><i class="fas fa-check"></i> Song selection guidance</li>
+                            <li><i class="fas fa-check"></i> Confidence coaching</li>
+                            <li><i class="fas fa-check"></i> 5-10 sessions package</li>
+                        </ul>
+                        <span class="service-price">₹15,000</span>
+                        <button class="service-btn">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- Sangeet Performance -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-image">
+                        <img src="./public/photo_6091303330392425399_y.jpg" alt="Sangeet Performance">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Sangeet Performance</h3>
+                        <p class="service-description">High-energy Bollywood or fusion performances for your sangeet ceremony that will wow your guests.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Full group training</li>
+                            <li><i class="fas fa-check"></i> Costume guidance</li>
+                            <li><i class="fas fa-check"></i> Music editing</li>
+                            <li><i class="fas fa-check"></i> 8-12 sessions package</li>
+                        </ul>
+                        <span class="service-price">₹25,000</span>
+                        <button class="service-btn">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- Bridal Party Dance -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-image">
+                        <img src="./public/wedding2.jpg" alt="Bridal Party Dance">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Bridal Party Dance</h3>
+                        <p class="service-description">Fun and energetic routines for your entire bridal party to perform together during the reception.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Group choreography</li>
+                            <li><i class="fas fa-check"></i> All skill levels welcome</li>
+                            <li><i class="fas fa-check"></i> Rehearsal coordination</li>
+                            <li><i class="fas fa-check"></i> 6-8 sessions package</li>
+                        </ul>
+                        <span class="service-price">₹18,000</span>
+                        <button class="service-btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wedding Gallery Section -->
+    <section class="wedding-gallery">
+        <div class="container">
+            <div class="wedding-section-header" data-aos="fade-up">
+                <h2>Our Wedding Moments</h2>
+                <p>Captured memories from our couples' special days. Let these inspire your wedding dance vision.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="./public/pose1.jpg" alt="Romantic First Dance">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <h3>Romantic First Dance</h3>
+                            <p>Classic waltz choreography</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="./public/Wedding photo.jpg" alt="Bridal Party Performance">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <h3>Bridal Party Performance</h3>
+                            <p>Bollywood fusion routine</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="./public/wedding5.jpg" alt="Father Daughter Dance">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <h3>Father-Daughter Dance</h3>
+                            <p>Emotional contemporary</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="./public/wedding6.jpg" alt="Sangeet Performance">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <h3>Sangeet Performance</h3>
+                            <p>High-energy group dance</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="./public/wedding7.jpg" alt="Couple Dance Lesson">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <h3>Dance Lessons</h3>
+                            <p>Personalized training</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
+                    <img src="./public/wedding8.jpg" alt="Group Dance">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <h3>Family Dance</h3>
+                            <p>Multi-generational fun</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="wedding-testimonials">
+        <div class="container">
+            <div class="wedding-section-header" data-aos="fade-up">
+                <h2>Happy Couples</h2>
+                <p>What our couples say about their wedding dance experience</p>
+            </div>
+
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                <p class="testimonial-text">Relive Dance Studio made our first dance absolutely magical! We had no dance experience but they created a beautiful, simple routine that looked stunning. Our guests thought we'd been taking lessons for months!</p>
+                <div class="testimonial-author">
+                    <div class="author-image">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Priya & Rohan">
+                    </div>
+                    <div class="author-info">
+                        <h4>Priya & Rohan</h4>
+                        <p>December 2023 Wedding</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="wedding-cta">
+        <div class="container">
+            <div data-aos="fade-up">
+                <h2>Ready for Your Perfect Wedding Dance?</h2>
+                <p>Contact us today to schedule your consultation and let's create something beautiful together for your special day.</p>
+                <button class="cta-btn">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Logo and About Section -->
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="./public/New_Logo__2_-removebg-preview.png" alt="Relive Dance & Fitness" class="footer-logo">
+                        
+                    </div>
+                    <p class="footer-about">
+                        Empowering dancers of all levels to express themselves through movement.
+                        Join our community and discover the joy of dance.
+                    </p>
+                    <div class="social-media">
+                        <a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/relive_danceandfitness/?igsh=MTA2ZHRhZThyYW5lMw%3D%3D#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@relivedanceandfitness479?si=TtNhZ-L85W6vYfJi" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links Section -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="training.html" class="footer-link">Studio Class</a></li>
+                        <li><a href="classes.html" class="footer-link">Online Classes</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Programs Section -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="bollywood.html" class="footer-link">Bollywood Dance</a></li>
+                        <li><a href="semi-classical.html" class="footer-link">Semi-Classical</a></li>
+                        <li><a href="" class="footer-link">Wedding Choreography</a></li>
+                        <li><a href="yoga.html" class="footer-link">Yoga Class</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p class="contact-text">57/4, Sneh Sadan, Subhash Hotel lane, near J.B Nagar metro station,
+                                JB Nagar, Andheri East, Mumbai- 400059</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p class="contact-text">+91 8828571648</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p class="contact-text">relivedanceandfitness@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 Relive Dance & Fitness. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#" class="legal-link">Privacy Policy</a>
+                    <a href="#" class="legal-link">Terms of Service</a>
+                    <a href="#" class="legal-link">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/7499653616" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <div class="whatsapp-tooltip">Chat with us</div>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script type="module" src="script.js"></script>
+    
+
+</body>
+</html>

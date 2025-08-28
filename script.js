@@ -50,6 +50,7 @@ window.addEventListener('scroll', () => {
 });
 
 // Mobile Navigation
+// Mobile Navigation Toggle
 navToggle.addEventListener('click', () => {
     navToggle.classList.toggle('active');
     navMenu.classList.toggle('active');
@@ -65,6 +66,83 @@ navLinks.forEach(link => {
     });
 });
 
+// Dropdown functionality for both desktop and mobile
+const dropdowns = document.querySelectorAll('.dropdown');
+
+dropdowns.forEach(dropdown => {
+    const dropdownLink = dropdown.querySelector('.nav-link');
+    const dropdownContent = dropdown.querySelector('.dropdown-content');
+    const chevron = dropdownLink.querySelector('i');
+    
+    // Toggle dropdown on click (for mobile)
+    dropdownLink.addEventListener('click', (e) => {
+        if (window.innerWidth <= 968) {
+            e.preventDefault();
+            dropdown.classList.toggle('active');
+            
+            // Rotate chevron icon
+            if (chevron) {
+                if (dropdown.classList.contains('active')) {
+                    chevron.style.transform = 'rotate(180deg)';
+                } else {
+                    chevron.style.transform = 'rotate(0deg)';
+                }
+            }
+        }
+    });
+    
+    // Show dropdown on hover (for desktop)
+    dropdown.addEventListener('mouseenter', () => {
+        if (window.innerWidth > 968) {
+            dropdown.classList.add('active');
+            if (chevron) {
+                chevron.style.transform = 'rotate(180deg)';
+            }
+        }
+    });
+    
+    // Hide dropdown when mouse leaves (for desktop)
+    dropdown.addEventListener('mouseleave', () => {
+        if (window.innerWidth > 968) {
+            dropdown.classList.remove('active');
+            if (chevron) {
+                chevron.style.transform = 'rotate(0deg)';
+            }
+        }
+    });
+});
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.dropdown')) {
+        dropdowns.forEach(dropdown => {
+            dropdown.classList.remove('active');
+            const chevron = dropdown.querySelector('i');
+            if (chevron) {
+                chevron.style.transform = 'rotate(0deg)';
+            }
+        });
+    }
+});
+
+// Update dropdown behavior on window resize
+window.addEventListener('resize', () => {
+    // Close all dropdowns on resize
+    dropdowns.forEach(dropdown => {
+        dropdown.classList.remove('active');
+        const chevron = dropdown.querySelector('i');
+        if (chevron) {
+            chevron.style.transform = 'rotate(0deg)';
+        }
+    });
+    
+    // Close mobile menu if resizing to desktop
+    if (window.innerWidth > 968) {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+});
 // Update active nav link based on scroll position
 function updateActiveNavLink() {
     const scrollPosition = window.scrollY;
@@ -470,3 +548,6 @@ function preloadImages() {
 
 // Initialize preloading after page load
 window.addEventListener('load', preloadImages);
+
+
+

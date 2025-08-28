@@ -32,15 +32,11 @@
     </div>
 
     <!-- Header & Navigation -->
-    <header class="header" id="header">
+        <header class="header" id="header">
         <nav class="nav">
             <div class="nav-container">
-                <div class="nav-logo">
-                    <img src="./public/logo.jpeg" alt="Relive Dance Academy Logo">
-                    <div>
-                        <h2 class="neon-glow">REL!VE</h2>
-                        <span>Dance & Fitness Studio</span>
-                    </div>
+               <div class="nav-logo">
+                    <img src="./public/New_Logo__2_-removebg-preview.png" alt="Relive Dance Academy Logo">
                 </div>
 
                 <ul class="nav-menu" id="nav-menu">
@@ -48,22 +44,28 @@
                         <a href="./index.html" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="./aboutpage.html" class="nav-link active">About Us</a>
+                        <a href="./aboutpage.html" class="nav-link">About</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="training.html" class="nav-link">Training Programs</a>
+                     <li class="nav-item dropdown">
+                        <a href="classes.html" class="nav-link">Studio Class</a>
+                        <div class="dropdown-content">
+                            <a href="bollywood.html">Bollywood Dance</a>
+                            <a href="semi-classical.html">Semi-Classical Dance</a>
+                            <a href="Wedding.html">Wedding Choreography</a>
+                        </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a href="classes.html" class="nav-link">Online Classes</a>
                         <div class="dropdown-content">
-                            <a href="bollywood.html">Bollywood Dance Class</a>
-                            <a href="semi-classical.html">Semi-Classical Dance Class</a>
-                            <a href="kids.html">Kids Dance Class</a>
-                            <a href="yoga.html">Yoga Class</a>
+                            <a href="Pre-recoded">Pre-recoded video</a>
+                            <a href="Wedding.html">Online class</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="contact.html" class="nav-link">Contact</a>
+                        <a href="./index.html" class="nav-link">Wedding choreography</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact Us</a>
                     </li>
                 </ul>
 
@@ -77,7 +79,7 @@
     </header>
 
     <!-- Hero Banner -->
-    <section class="about-hero">
+    <!-- <section class="about-hero">
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content" data-aos="fade-up" data-aos-duration="800">
@@ -85,71 +87,87 @@
                 <p class="tagline">Where movement meets memory</p>
             </div>
         </div>
-    </section>
+    </section> -->
+
+    <section id="home" class="hero">
+    <div class="hero-carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide active"
+                style="background-image: url('./public/Relive6.png');">
+                <div class="carousel-overlay"></div>
+            </div>
+            <div class="carousel-slide"
+                style="background-image: url('./public/Relive9.png');">
+                <div class="carousel-overlay"></div>
+            </div>
+            <div class="carousel-slide"
+                style="background-image: url('./public/Relive\ 7.png');">
+                <div class="carousel-overlay"></div>
+            </div>
+        </div>
+    </div>
+   <div class="hero-content">
+        <h1 class="hero-title">
+            <span class="">About Relive Dance Studio</span>
+        </h1>
+        <p class="hero-subtext"> Where movement meets memory</p>
+
+    </div>
+</section>
 
     <!-- Our Story Section -->
-    <section class="our-story">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-subtitle">Our Journey</span>
-                <h2 class="section-title">The Relive Story</h2>
+  <section class="our-story">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-subtitle">Our Journey</span>
+            <h2 class="section-title">The Relive Story</h2>
+        </div>
+
+        <div class="story-grid">
+            <div class="story-text" data-aos="fade-right" data-aos-delay="200">
+                <p>Founded by <span class="highlight">Ashwini Soni</span>, a passionate dancer and fitness enthusiast, Relive Dance and Fitness has been a beacon of creativity and health in Mumbai. After a successful corporate career spanning over 4 years, she decided to share her love for dance and fitness with the world.</p>
+                
+                <p>What began as a small dance class has blossomed into a vibrant community where students of all ages discover the joy of movement. Our studio offers a unique blend of traditional and contemporary dance styles, creating a space where artistry meets athleticism.</p>
+                
             </div>
 
-            <div class="story-grid">
-                <div class="story-text" data-aos="fade-right" data-aos-delay="200">
-                    <p>Founded by <span class="highlight">Ashwini Soni</span>, a passionate dancer and fitness enthusiast, Relive Dance and Fitness has been a beacon of creativity and health in Mumbai. After a successful corporate career spanning over 4 years, she decided to share her love for dance and fitness with the world.</p>
-                    
-                    <p>What began as a small dance class has blossomed into a vibrant community where students of all ages discover the joy of movement. Our studio offers a unique blend of traditional and contemporary dance styles, creating a space where artistry meets athleticism.</p>
-                    
-                    <div class="stats-container">
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="500">0</div>
-                            <div class="stat-label">Happy Students</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="10">0</div>
-                            <div class="stat-label">Dance Styles</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="7">0</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
+            <div class="story-images" data-aos="fade-left" data-aos-delay="400">
+                <div class="image-carousel">
+                    <div class="main-image-container">
+                        <img src="./public/pose.jpg" alt="Dance Class" class="active">
+                        <img src="./public/photo_6091303330392425361_y.jpg" alt="Group Dance">
+                        <img src="./public/Gallery.jpg" alt="Dance Performance">
+                        <img src="./public/yoga.jpg" alt="Yoga Class">
                     </div>
-                </div>
-
-                <div class="story-images" data-aos="fade-left" data-aos-delay="400">
-                    <div class="image-grid">
-                        <div class="grid-item item-1">
-                            <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Dance Class">
+                    <div class="carousel-controls">
+                        <button class="carousel-btn prev-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="carousel-indicators">
+                            <span class="indicator active" data-index="0"></span>
+                            <span class="indicator" data-index="1"></span>
+                            <span class="indicator" data-index="2"></span>
+                            <span class="indicator" data-index="3"></span>
                         </div>
-                        <div class="grid-item item-2">
-                            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Group Dance">
-                        </div>
-                        <div class="grid-item item-3">
-                            <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Dance Performance">
-                        </div>
-                        <div class="grid-item item-4">
-                            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Yoga Class">
-                        </div>
+                        <button class="carousel-btn next-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Vision Section -->
-    <section class="vision-section">
-        <div class="container">
-            <div class="vision-content" data-aos="zoom-in">
-                <div class="vision-icon">
-                    <i class="fas fa-lightbulb"></i>
-                </div>
-                <h3>Our Vision</h3>
-                <p>At Relive Dance and Fitness, we believe dance is more than just movement - it's a way to express, connect, and transform. Our vision is to create a space where every individual, regardless of age or experience, can discover the joy of dance while building strength, flexibility, and confidence.</p>
-                <p>We're committed to fostering a community that celebrates diversity, creativity, and personal growth through the art of movement.</p>
-            </div>
+    </div>
+     <div class="container">
+        <div class="vision-box" data-aos="zoom-in">
+            <h3 class="vision-title">
+                <i class="fas fa-lightbulb"></i> Our Vision
+            </h3>
+            <p>At Relive Dance and Fitness, we believe dance is more than just movement - it's a way to express, connect, and transform. Our vision is to create a space where every individual, regardless of age or experience, can discover the joy of dance while building strength, flexibility, and confidence.</p>
+            <p>We're committed to fostering a community that celebrates diversity, creativity, and personal growth through the art of movement.</p>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Founder Section -->
     <section class="founder-section">
@@ -161,7 +179,7 @@
 
             <div class="founder-content">
                 <div class="founder-image" data-aos="fade-right">
-                    <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Ashwini Soni - Founder">
+                    <img src="./public/pose1.jpg" alt="Ashwini Soni - Founder">
                 </div>
                 <div class="founder-info" data-aos="fade-left">
                     <h3>From Corporate to Choreography</h3>
@@ -192,38 +210,6 @@
         </div>
     </section>
 
-    <!-- Video Showcase Section -->
-    <section class="video-showcase">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-subtitle">Performance</span>
-                <h2 class="section-title">Sangeet by Ashwini Soni</h2>
-            </div>
-
-            <div  data-aos="zoom-in">
-                <div class="video-wrapper">
-                    <video id="dance-video" poster="./public/hero-dance-2.jpg">
-                        <source src="./public/video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="video-controls">
-                        <button class="control-btn play-btn" id="play-btn">
-                            <i class="fas fa-play"></i>
-                        </button>
-                        <div class="progress-container">
-                            <progress id="progress-bar" value="0" max="100"></progress>
-                        </div>
-                        <button class="control-btn volume-btn" id="volume-btn">
-                            <i class="fas fa-volume-up"></i>
-                        </button>
-                        <button class="control-btn fullscreen-btn" id="fullscreen-btn">
-                            <i class="fas fa-expand"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -232,11 +218,8 @@
                 <!-- Logo and About Section -->
                 <div class="footer-section">
                     <div class="footer-brand">
-                        <img src="./public/logo.jpeg" alt="Relive Dance & Fitness" class="footer-logo">
-                        <div>
-                            <h3 class="brand-name">Relive</h3>
-                            <p class="brand-tagline">Dance & Fitness</p>
-                        </div>
+                        <img src="./public/New_Logo__2_-removebg-preview.png" alt="Relive Dance & Fitness" class="footer-logo">
+                        
                     </div>
                     <p class="footer-about">
                         Empowering dancers of all levels to express themselves through movement.
@@ -244,9 +227,8 @@
                     </p>
                     <div class="social-media">
                         <a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
-                        <a href="#" aria-label="TikTok" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/relive_danceandfitness/?igsh=MTA2ZHRhZThyYW5lMw%3D%3D#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@relivedanceandfitness479?si=TtNhZ-L85W6vYfJi" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
 
@@ -254,11 +236,11 @@
                 <div class="footer-section">
                     <h4 class="footer-heading">Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="#home" class="footer-link">Home</a></li>
-                        <li><a href="#aboutus" class="footer-link">About Us</a></li>
-                        <li><a href="#programs" class="footer-link">Training Programs</a></li>
-                        <li><a href="#classes" class="footer-link">Online Classes</a></li>
-                        <li><a href="#contact" class="footer-link">Contact</a></li>
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="training.html" class="footer-link">Studio Class</a></li>
+                        <li><a href="classes.html" class="footer-link">Online Classes</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
                     </ul>
                 </div>
 
@@ -266,11 +248,10 @@
                 <div class="footer-section">
                     <h4 class="footer-heading">Programs</h4>
                     <ul class="footer-links">
-                        <li><a href="#" class="footer-link">Bollywood Dance</a></li>
-                        <li><a href="#" class="footer-link">Semi-Classical</a></li>
-                        <li><a href="#" class="footer-link">Kids Dance</a></li>
-                        <li><a href="#" class="footer-link">Contemporary</a></li>
-                        <li><a href="#" class="footer-link">Yoga Dance</a></li>
+                        <li><a href="bollywood.html" class="footer-link">Bollywood Dance</a></li>
+                        <li><a href="semi-classical.html" class="footer-link">Semi-Classical</a></li>
+                        <li><a href="" class="footer-link">Wedding Choreography</a></li>
+                        <li><a href="yoga.html" class="footer-link">Yoga Class</a></li>
                     </ul>
                 </div>
 
@@ -279,15 +260,16 @@
                     <h4 class="footer-heading">Contact Info</h4>
                     <div class="contact-info">
                         <div class="contact-item">
-                            <i class="fas fa-map-marker-alt contact-icon"></i>
-                            <p class="contact-text">57/4, Sneh Sadan, Subhash Hotel lane, near J.B Nagar metro station, JB Nagar, Andheri East, Mumbai- 400059</p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p class="contact-text">57/4, Sneh Sadan, Subhash Hotel lane, near J.B Nagar metro station,
+                                JB Nagar, Andheri East, Mumbai- 400059</p>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-phone contact-icon"></i>
+                            <i class="fas fa-phone"></i>
                             <p class="contact-text">+91 8828571648</p>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-envelope contact-icon"></i>
+                            <i class="fas fa-envelope"></i>
                             <p class="contact-text">relivedanceandfitness@gmail.com</p>
                         </div>
                     </div>
@@ -305,7 +287,6 @@
             </div>
         </div>
     </footer>
-
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/7499653616" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
@@ -326,95 +307,54 @@
     <!-- Custom JavaScript -->
     <script type="module" src="script.js"></script>
     
-    <script>
-        // Initialize AOS animation library
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-
-        // Video Player Controls
-        const video = document.getElementById('dance-video');
-        const playBtn = document.getElementById('play-btn');
-        const progressBar = document.getElementById('progress-bar');
-        const volumeBtn = document.getElementById('volume-btn');
-        const fullscreenBtn = document.getElementById('fullscreen-btn');
-
-        playBtn.addEventListener('click', togglePlay);
-        video.addEventListener('click', togglePlay);
-        video.addEventListener('timeupdate', updateProgressBar);
-        progressBar.addEventListener('click', seek);
-        volumeBtn.addEventListener('click', toggleMute);
-        fullscreenBtn.addEventListener('click', toggleFullscreen);
-
-        function togglePlay() {
-            if (video.paused) {
-                video.play();
-                playBtn.innerHTML = '<i class="fas fa-pause"></i>';
-            } else {
-                video.pause();
-                playBtn.innerHTML = '<i class="fas fa-play"></i>';
-            }
-        }
-
-        function updateProgressBar() {
-            const percentage = (video.currentTime / video.duration) * 100;
-            progressBar.value = percentage;
-        }
-
-        function seek(e) {
-            const percent = e.offsetX / this.offsetWidth;
-            video.currentTime = percent * video.duration;
-        }
-
-        function toggleMute() {
-            video.muted = !video.muted;
-            volumeBtn.innerHTML = video.muted ? '<i class="fas fa-volume-mute"></i>' : '<i class="fas fa-volume-up"></i>';
-        }
-
-        function toggleFullscreen() {
-            if (!document.fullscreenElement) {
-                video.requestFullscreen().catch(err => {
-                    console.log(`Error attempting to enable fullscreen: ${err.message}`);
-                });
-            } else {
-                document.exitFullscreen();
-            }
-        }
-
-        // Counter Animation
-        const statNumbers = document.querySelectorAll('.stat-number');
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.main-image-container img');
+    const indicators = document.querySelectorAll('.indicator');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentIndex = 0;
+    
+    function showImage(index) {
+        // Hide all images
+        images.forEach(img => img.classList.remove('active'));
+        indicators.forEach(ind => ind.classList.remove('active'));
         
-        function animateCounters() {
-            statNumbers.forEach(stat => {
-                const target = parseInt(stat.getAttribute('data-count'));
-                const duration = 2000; // 2 seconds
-                const step = target / (duration / 16); // 60fps
-                let current = 0;
-                
-                const counter = setInterval(() => {
-                    current += step;
-                    if (current >= target) {
-                        clearInterval(counter);
-                        current = target;
-                    }
-                    stat.textContent = Math.floor(current);
-                }, 16);
-            });
-        }
-
-        // Only animate when section is in view
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounters();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        document.querySelector('.stats-container') && observer.observe(document.querySelector('.stats-container'));
-    </script>
+        // Show selected image
+        images[index].classList.add('active');
+        indicators[index].classList.add('active');
+        
+        currentIndex = index;
+    }
+    
+    // Event listeners for indicators
+    indicators.forEach(indicator => {
+        indicator.addEventListener('click', function() {
+            const index = parseInt(this.getAttribute('data-index'));
+            showImage(index);
+        });
+    });
+    
+    // Event listeners for navigation buttons
+    prevBtn.addEventListener('click', function() {
+        let newIndex = currentIndex - 1;
+        if (newIndex < 0) newIndex = images.length - 1;
+        showImage(newIndex);
+    });
+    
+    nextBtn.addEventListener('click', function() {
+        let newIndex = currentIndex + 1;
+        if (newIndex >= images.length) newIndex = 0;
+        showImage(newIndex);
+    });
+    
+    // Auto-advance the carousel every 5 seconds
+    setInterval(() => {
+        let newIndex = currentIndex + 1;
+        if (newIndex >= images.length) newIndex = 0;
+        showImage(newIndex);
+    }, 5000);
+});
+</script>
 </body>
 </html>

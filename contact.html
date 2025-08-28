@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Relive Dance & Fitness Studio</title>
+    <meta name="description" content="Discover the story behind Relive Dance & Fitness Studio - Where movement meets memory. Professional dance training in Mumbai.">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Pacifico&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="aboutpage.css">
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+       <header class="header" id="header">
+        <nav class="nav">
+            <div class="nav-container">
+               <div class="nav-logo">
+                    <img src="./public/New_Logo__2_-removebg-preview.png" alt="Relive Dance Academy Logo">
+                </div>
+
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./aboutpage.html" class="nav-link">About</a>
+                    </li>
+                     <li class="nav-item dropdown">
+                        <a href="classes.html" class="nav-link">Studio Class</a>
+                        <div class="dropdown-content">
+                            <a href="bollywood.html">Bollywood Dance</a>
+                            <a href="semi-classical.html">Semi-Classical Dance</a>
+                            <a href="Wedding.html">Wedding Choreography</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="classes.html" class="nav-link">Online Classes</a>
+                        <div class="dropdown-content">
+                            <a href="Pre-recoded">Pre-recoded video</a>
+                            <a href="Wedding.html">Online class</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link">Wedding choreography</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+     <section id="contact" class="contact-section" style="margin-top: 50px;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Get In Touch</span>
+                <p class="section-description">
+                    Ready to start your dance journey? Get in touch with us today.
+                    We're here to answer your questions and help you find the perfect program.
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Address</h3>
+                            <p>57/4, Sneh Sadan, Subhash Hotel lane, near J.B Nagar metro station, JB Nagar,
+                                Andheri East, Mumbai- 400059</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+91 8828571648</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>relivedanceandfitness@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 9:00 PM<br>
+                                Saturday: 8:00 AM - 6:00 PM<br>
+                                Sunday: 10:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" data-aos="fade-left" id="contact-form">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter Full Name" required>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="Enter Email Address" required>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter Phone Number">
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="">Select a subject...</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="classes">Class Information</option>
+                            <option value="enrollment">Enrollment</option>
+                            <option value="private">Private Lessons</option>
+                            <option value="events">Events & Performances</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required
+                            placeholder="Tell us about your dance goals, experience level, or any questions you have..."></textarea>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                        <div class="btn-loading">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                    </button>
+
+                    <div id="form-message" class="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Logo and About Section -->
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="./public/New_Logo__2_-removebg-preview.png" alt="Relive Dance & Fitness" class="footer-logo">
+                        
+                    </div>
+                    <p class="footer-about">
+                        Empowering dancers of all levels to express themselves through movement.
+                        Join our community and discover the joy of dance.
+                    </p>
+                    <div class="social-media">
+                        <a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/relive_danceandfitness/?igsh=MTA2ZHRhZThyYW5lMw%3D%3D#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@relivedanceandfitness479?si=TtNhZ-L85W6vYfJi" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links Section -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="training.html" class="footer-link">Studio Class</a></li>
+                        <li><a href="classes.html" class="footer-link">Online Classes</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Programs Section -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="bollywood.html" class="footer-link">Bollywood Dance</a></li>
+                        <li><a href="semi-classical.html" class="footer-link">Semi-Classical</a></li>
+                        <li><a href="" class="footer-link">Wedding Choreography</a></li>
+                        <li><a href="yoga.html" class="footer-link">Yoga Class</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p class="contact-text">57/4, Sneh Sadan, Subhash Hotel lane, near J.B Nagar metro station,
+                                JB Nagar, Andheri East, Mumbai- 400059</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p class="contact-text">+91 8828571648</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p class="contact-text">relivedanceandfitness@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 Relive Dance & Fitness. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#" class="legal-link">Privacy Policy</a>
+                    <a href="#" class="legal-link">Terms of Service</a>
+                    <a href="#" class="legal-link">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/7499653616" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <div class="whatsapp-tooltip">Chat with us</div>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script type="module" src="script.js"></script>
+    
+</body>
+</html>

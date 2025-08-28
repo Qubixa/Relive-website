@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Relive Dance & Fitness Studio</title>
+    <meta name="description" content="Discover the story behind Relive Dance & Fitness Studio - Where movement meets memory. Professional dance training in Mumbai.">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Pacifico&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+ <style>
+        /* Main Content Styles */
+        .main-content {
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+
+        /* Hero Section */
+        .categories-hero {
+            position: relative;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1547153760-18fc86324498?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+            z-index: 2;
+        }
+
+        .categories-hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            font-family: 'Playfair', serif;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(90deg, #9c27b0, #e91e63);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .categories-hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            color: #e0e0e0;
+        }
+
+        .hero-btn {
+            background: linear-gradient(135deg, #9c27b0 0%, #e91e63 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(135deg, #8e24aa 0%, #d81b60 100%);
+        }
+
+        /* Categories Section */
+        .categories-section {
+            padding: 80px 0;
+            background: #121212;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-family: 'Playfair', serif;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #9c27b0, #e91e63);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #bbbbbb;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Unique Category Grid */
+        .category-mosaic {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(4, 200px);
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .category-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s ease;
+        }
+
+        .category-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+        }
+
+        .category-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .category-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .category-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            color: white;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .category-desc {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .category-btn {
+            align-self: flex-start;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .category-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Category Item Sizes */
+        .item-1 {
+            grid-column: span 6;
+            grid-row: span 2;
+        }
+
+        .item-2 {
+            grid-column: span 3;
+            grid-row: span 1;
+        }
+
+        .item-3 {
+            grid-column: span 3;
+            grid-row: span 1;
+        }
+
+        .item-4 {
+            grid-column: span 3;
+            grid-row: span 2;
+        }
+
+        .item-5 {
+            grid-column: span 3;
+            grid-row: span 2;
+        }
+
+        .item-6 {
+            grid-column: span 6;
+            grid-row: span 2;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 80px 0;
+            background: #0a0a0a;
+        }
+
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: #1e1e1e;
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border-bottom: 4px solid #9c27b0;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #9c27b0, #e91e63);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .feature-desc {
+            color: #bbbbbb;
+            line-height: 1.6;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 1024px) {
+            .category-mosaic {
+                grid-template-rows: repeat(6, 200px);
+            }
+            
+            .item-1, .item-6 {
+                grid-column: span 12;
+            }
+            
+            .item-2, .item-3, .item-4, .item-5 {
+                grid-column: span 6;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .categories-hero h1 {
+                font-size: 3rem;
+            }
+            
+            .categories-hero p {
+                font-size: 1.2rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+            
+            .category-mosaic {
+                grid-template-rows: repeat(6, 150px);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .categories-hero {
+                height: 60vh;
+            }
+            
+            .categories-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .category-mosaic {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(6, 250px);
+            }
+            
+            .item-1, .item-2, .item-3, .item-4, .item-5, .item-6 {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+        }
+    </style>
+
+<body>
+
+    <!-- Header & Navigation -->
+      <header class="header" id="header">
+        <nav class="nav">
+            <div class="nav-container">
+               <div class="nav-logo">
+                    <img src="./public/New_Logo__2_-removebg-preview.png" alt="Relive Dance Academy Logo">
+                </div>
+
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./aboutpage.html" class="nav-link">About</a>
+                    </li>
+                     <li class="nav-item dropdown">
+                        <a href="classes.html" class="nav-link">Studio Class</a>
+                        <div class="dropdown-content">
+                            <a href="bollywood.html">Bollywood Dance</a>
+                            <a href="semi-classical.html">Semi-Classical Dance</a>
+                            <a href="Wedding.html">Wedding Choreography</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="classes.html" class="nav-link">Online Classes</a>
+                        <div class="dropdown-content">
+                            <a href="Pre-recoded">Pre-recoded video</a>
+                            <a href="Wedding.html">Online class</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link">Wedding choreography</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+       <!-- Hero Section -->
+    <section class="categories-hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Explore Our Dance Categories</h1>
+            <p>Discover the perfect dance style for you with our professional instructors and comprehensive programs</p>
+            <button class="hero-btn">Start Your Dance Journey</button>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Dance Categories</h2>
+                <p>From high-energy Bollywood to graceful Semi-Classical, we offer diverse styles for all ages and skill levels</p>
+            </div>
+
+            <div class="category-mosaic">
+                <!-- Bollywood -->
+                <div class="category-item item-1" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Bollywood Dance">
+                    <div class="category-overlay">
+                        <h3 class="category-title">Bollywood Dance</h3>
+                        <p class="category-desc">Energetic and expressive dance style inspired by Indian cinema</p>
+                        <button class="category-btn">Explore Classes</button>
+                    </div>
+                </div>
+
+                <!-- Semi-Classical -->
+                <div class="category-item item-2" data-aos="fade-up" data-aos-delay="150">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Semi-Classical Dance">
+                    <div class="category-overlay">
+                        <h3 class="category-title">Semi-Classical</h3>
+                        <button class="category-btn">View Programs</button>
+                    </div>
+                </div>
+
+                <!-- Kids Dance -->
+                <div class="category-item item-3" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Kids Dance">
+                    <div class="category-overlay">
+                        <h3 class="category-title">Kids Dance</h3>
+                        <button class="category-btn">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- Yoga -->
+                <div class="category-item item-4" data-aos="fade-up" data-aos-delay="250">
+                    <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Yoga">
+                    <div class="category-overlay">
+                        <h3 class="category-title">Yoga</h3>
+                        <p class="category-desc">Harmonize body and mind with our yoga sessions</p>
+                        <button class="category-btn">Join Now</button>
+                    </div>
+                </div>
+
+                <!-- Wedding Choreography -->
+                <div class="category-item item-5" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Wedding Choreography">
+                    <div class="category-overlay">
+                        <h3 class="category-title">Wedding Choreography</h3>
+                        <button class="category-btn">Get Started</button>
+                    </div>
+                </div>
+
+                <!-- All Categories -->
+                <div class="category-item item-6" data-aos="fade-up" data-aos-delay="350">
+                    <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="All Dance Categories">
+                    <div class="category-overlay">
+                        <h3 class="category-title">Explore All Categories</h3>
+                        <p class="category-desc">Find the perfect dance style for your personality and goals</p>
+                        <button class="category-btn">View All Programs</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Why Choose Relive Studio?</h2>
+                <p>We provide exceptional dance education through innovative teaching methods</p>
+            </div>
+
+            <div class="features-container">
+                <div class="features-grid">
+                    <!-- Feature 1 -->
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3 class="feature-title">Expert Instructors</h3>
+                        <p class="feature-desc">Learn from industry professionals with years of teaching and performance experience.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3 class="feature-title">Structured Curriculum</h3>
+                        <p class="feature-desc">Progress through carefully designed levels from beginner to advanced.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="feature-title">Supportive Community</h3>
+                        <p class="feature-desc">Join a network of passionate dancers who motivate and inspire each other.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Flexible Scheduling</h3>
+                        <p class="feature-desc">Choose from multiple class times to fit your busy schedule.</p>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="feature-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3 class="feature-title">Performance Opportunities</h3>
+                        <p class="feature-desc">Showcase your skills in our annual recitals and community events.</p>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="feature-icon">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <h3 class="feature-title">All Ages Welcome</h3>
+                        <p class="feature-desc">Programs designed for children, teens, and adults at every skill level.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Logo and About Section -->
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="./public/New_Logo__2_-removebg-preview.png" alt="Relive Dance & Fitness" class="footer-logo">
+                        
+                    </div>
+                    <p class="footer-about">
+                        Empowering dancers of all levels to express themselves through movement.
+                        Join our community and discover the joy of dance.
+                    </p>
+                    <div class="social-media">
+                        <a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/relive_danceandfitness/?igsh=MTA2ZHRhZThyYW5lMw%3D%3D#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@relivedanceandfitness479?si=TtNhZ-L85W6vYfJi" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links Section -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="training.html" class="footer-link">Studio Class</a></li>
+                        <li><a href="classes.html" class="footer-link">Online Classes</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Programs Section -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="bollywood.html" class="footer-link">Bollywood Dance</a></li>
+                        <li><a href="semi-classical.html" class="footer-link">Semi-Classical</a></li>
+                        <li><a href="" class="footer-link">Wedding Choreography</a></li>
+                        <li><a href="yoga.html" class="footer-link">Yoga Class</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p class="contact-text">57/4, Sneh Sadan, Subhash Hotel lane, near J.B Nagar metro station,
+                                JB Nagar, Andheri East, Mumbai- 400059</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p class="contact-text">+91 8828571648</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p class="contact-text">relivedanceandfitness@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 Relive Dance & Fitness. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#" class="legal-link">Privacy Policy</a>
+                    <a href="#" class="legal-link">Terms of Service</a>
+                    <a href="#" class="legal-link">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/7499653616" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <div class="whatsapp-tooltip">Chat with us</div>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script type="module" src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Dance Tutorials - Relive Dance & Fitness Studio</title>
+    <meta name="description" content="Professional online dance tutorials for Bollywood, Semi-Classical, Kids Dance and more.">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Pacifico&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+
+    <style>
+        /* Tutorial Page Styles */
+        .tutorial-hero {
+            position: relative;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            background: url('https://images.unsplash.com/photo-1547153760-18fc86324498?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .tutorial-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(126, 32, 126, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%);
+        }
+
+        .tutorial-hero .container {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .tutorial-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            font-family: 'Playfair', serif;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .tutorial-hero p {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            line-height: 1.4;
+        }
+
+        .tutorial-hero-btn {
+            background: #7e207e;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .tutorial-hero-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            background: #6a1b9a;
+        }
+
+        /* Tutorial Categories Section */
+        .tutorial-categories {
+            padding: 80px 0;
+            background: #121212;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-family: 'Playfair', serif;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #7e207e;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #aaaaaa;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .category-card {
+            background: #1e1e1e;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
+            position: relative;
+            border: 1px solid #333333;
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .category-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .category-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .category-card:hover .category-image img {
+            transform: scale(1.1);
+        }
+
+        .category-content {
+            padding: 25px;
+        }
+
+        .category-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-family: 'Playfair', serif;
+        }
+
+        .category-description {
+            color: #bbbbbb;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .category-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .category-features li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            color: #aaaaaa;
+        }
+
+        .category-features i {
+            color: #7e207e;
+            font-size: 0.9rem;
+        }
+
+        .category-btn {
+            width: 100%;
+            background: #7e207e;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .category-btn:hover {
+            background: #6a1b9a;
+        }
+
+        /* Tutorial Benefits Section */
+        .tutorial-benefits {
+            padding: 80px 0;
+            background: #0a0a0a;
+        }
+
+        .benefits-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .benefit-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            background: #1e1e1e;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            color: #7e207e;
+            margin-bottom: 20px;
+        }
+
+        .benefit-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .benefit-description {
+            color: #bbbbbb;
+            line-height: 1.6;
+        }
+
+        /* Testimonials Section */
+        .tutorial-testimonials {
+            padding: 80px 0;
+            background: #121212;
+            text-align: center;
+        }
+
+        .testimonial-card {
+            background: #1e1e1e;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonial-card:before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 5rem;
+            color: rgba(126, 32, 126, 0.2);
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-size: 1.2rem;
+            color: #eeeeee;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #7e207e;
+        }
+
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            font-size: 1.2rem;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            color: #888888;
+            font-size: 0.9rem;
+        }
+
+        /* Pricing Section */
+        .tutorial-pricing {
+            padding: 80px 0;
+            background: #0a0a0a;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .pricing-card {
+            background: #1e1e1e;
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            border: 1px solid #333333;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .pricing-card.popular {
+            border: 1px solid #7e207e;
+            position: relative;
+        }
+
+        .popular-tag {
+            position: absolute;
+            top: -15px;
+            right: 30px;
+            background: #7e207e;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .pricing-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #7e207e;
+            margin-bottom: 20px;
+        }
+
+        .pricing-price span {
+            font-size: 1rem;
+            color: #bbbbbb;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .pricing-features li {
+            padding: 10px 0;
+            color: #bbbbbb;
+            border-bottom: 1px solid #333333;
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-btn {
+            width: 100%;
+            background: #7e207e;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-btn:hover {
+            background: #6a1b9a;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .tutorial-hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .tutorial-hero p {
+                font-size: 1.3rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .tutorial-hero {
+                height: 60vh;
+            }
+            
+            .tutorial-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .tutorial-hero p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header & Navigation (Same as wedding page) -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="./public/logo.jpeg" alt="Relive Dance Academy Logo">
+                    <div>
+                        <h2 class="neon-glow">REL!VE</h2>
+                        <span>Dance & Fitness Studio</span>
+                    </div>
+                </div>
+
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./aboutpage.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="training.html" class="nav-link">Training Programs</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="classes.html" class="nav-link active">Online Classes</a>
+                        <div class="dropdown-content">
+                            <a href="bollywood.html">Bollywood Dance Class</a>
+                            <a href="semi-classical.html">Semi-Classical Dance Class</a>
+                            <a href="kids.html">Kids Dance Class</a>
+                            <a href="yoga.html">Yoga Class</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Tutorial Hero Section -->
+    <section class="tutorial-hero">
+        <div class="tutorial-hero-overlay"></div>
+        <div class="container">
+            <div data-aos="fade-up" data-aos-duration="800">
+                <h1>Online Dance Tutorials</h1>
+                <p>Learn from the best instructors anywhere, anytime with our professional online dance classes</p>
+                <button class="tutorial-hero-btn">Start Learning Today</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutorial Categories Section -->
+    <section class="tutorial-categories">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Tutorial Categories</h2>
+                <p>Choose from our wide range of dance styles and fitness programs designed for all skill levels</p>
+            </div>
+
+            <div class="categories-grid">
+                <!-- Bollywood Dance -->
+                <div class="category-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Bollywood Dance">
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">Bollywood Dance</h3>
+                        <p class="category-description">Learn energetic Bollywood routines with authentic expressions and movements from our expert instructors.</p>
+                        <ul class="category-features">
+                            <li><i class="fas fa-check"></i> Beginner to advanced levels</li>
+                            <li><i class="fas fa-check"></i> Weekly new choreography</li>
+                            <li><i class="fas fa-check"></i> Song breakdowns</li>
+                            <li><i class="fas fa-check"></i> 24/7 access</li>
+                        </ul>
+                        <button class="category-btn">View Classes</button>
+                    </div>
+                </div>
+
+                <!-- Semi-Classical -->
+                <div class="category-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Semi-Classical Dance">
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">Semi-Classical</h3>
+                        <p class="category-description">Master the grace and expressions of semi-classical dance forms with detailed tutorials.</p>
+                        <ul class="category-features">
+                            <li><i class="fas fa-check"></i> Mudras & expressions</li>
+                            <li><i class="fas fa-check"></i> Traditional techniques</li>
+                            <li><i class="fas fa-check"></i> Modern adaptations</li>
+                            <li><i class="fas fa-check"></i> Performance tips</li>
+                        </ul>
+                        <button class="category-btn">View Classes</button>
+                    </div>
+                </div>
+
+                <!-- Kids Dance -->
+                <div class="category-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Kids Dance">
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">Kids Dance</h3>
+                        <p class="category-description">Fun and engaging dance classes designed specifically for children to learn and enjoy.</p>
+                        <ul class="category-features">
+                            <li><i class="fas fa-check"></i> Age-appropriate choreography</li>
+                            <li><i class="fas fa-check"></i> Creative movement</li>
+                            <li><i class="fas fa-check"></i> Coordination development</li>
+                            <li><i class="fas fa-check"></i> Fun learning environment</li>
+                        </ul>
+                        <button class="category-btn">View Classes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutorial Benefits Section -->
+    <section class="tutorial-benefits">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Why Choose Our Online Tutorials?</h2>
+                <p>Discover the advantages of learning dance online with Relive Dance Studio</p>
+            </div>
+
+            <div class="benefits-container">
+                <div class="benefits-grid">
+                    <!-- Benefit 1 -->
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="benefit-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3 class="benefit-title">Learn Anywhere</h3>
+                        <p class="benefit-description">Access our tutorials from any device, at any time that suits your schedule. No need to travel to a studio.</p>
+                    </div>
+
+                    <!-- Benefit 2 -->
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="benefit-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 class="benefit-title">Expert Instructors</h3>
+                        <p class="benefit-description">Learn from professional dancers with years of experience in teaching and performing.</p>
+                    </div>
+
+                    <!-- Benefit 3 -->
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="benefit-icon">
+                            <i class="fas fa-redo"></i>
+                        </div>
+                        <h3 class="benefit-title">Repeat Lessons</h3>
+                        <p class="benefit-description">Watch lessons as many times as you need to master each move at your own pace.</p>
+                    </div>
+
+                    <!-- Benefit 4 -->
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="benefit-icon">
+                            <i class="fas fa-rupee-sign"></i>
+                        </div>
+                        <h3 class="benefit-title">Affordable Pricing</h3>
+                        <p class="benefit-description">High-quality instruction at a fraction of the cost of in-person classes.</p>
+                    </div>
+
+                    <!-- Benefit 5 -->
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="benefit-icon">
+                            <i class="fas fa-community"></i>
+                        </div>
+                        <h3 class="benefit-title">Supportive Community</h3>
+                        <p class="benefit-description">Connect with other students, share progress, and get feedback from instructors.</p>
+                    </div>
+
+                    <!-- Benefit 6 -->
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="benefit-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3 class="benefit-title">Progress Tracking</h3>
+                        <p class="benefit-description">Monitor your improvement with our built-in progress tracking tools and certificates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="tutorial-testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>What Our Students Say</h2>
+                <p>Hear from our students about their learning experience with our online tutorials</p>
+            </div>
+
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                <p class="testimonial-text">The online tutorials from Relive Dance Studio have completely transformed my dancing. The instructors break down each move so clearly, and being able to replay lessons has helped me improve faster than I ever did with in-person classes. I've gone from a complete beginner to performing confidently at family events!</p>
+                <div class="testimonial-author">
+                    <div class="author-image">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Priya Sharma">
+                    </div>
+                    <div class="author-info">
+                        <h4>Priya Sharma</h4>
+                        <p>Bollywood Dance Student</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="tutorial-pricing">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Simple, Affordable Pricing</h2>
+                <p>Choose the plan that works best for your learning goals and budget</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Basic Plan -->
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="pricing-title">Basic</h3>
+                    <div class="pricing-price">₹999 <span>/month</span></div>
+                    <ul class="pricing-features">
+                        <li>Access to 1 dance style</li>
+                        <li>5 new tutorials per month</li>
+                        <li>720p video quality</li>
+                        <li>Email support</li>
+                        <li>Progress tracking</li>
+                    </ul>
+                    <button class="pricing-btn">Get Started</button>
+                </div>
+
+                <!-- Popular Plan -->
+                <div class="pricing-card popular" data-aos="fade-up" data-aos-delay="200">
+                    <div class="popular-tag">Most Popular</div>
+                    <h3 class="pricing-title">Premium</h3>
+                    <div class="pricing-price">₹1,999 <span>/month</span></div>
+                    <ul class="pricing-features">
+                        <li>Access to all dance styles</li>
+                        <li>15+ new tutorials per month</li>
+                        <li>1080p HD video quality</li>
+                        <li>Priority email support</li>
+                        <li>Progress tracking & certificates</li>
+                        <li>Exclusive workshops</li>
+                    </ul>
+                    <button class="pricing-btn">Get Started</button>
+                </div>
+
+                <!-- Family Plan -->
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="pricing-title">Family</h3>
+                    <div class="pricing-price">₹2,999 <span>/month</span></div>
+                    <ul class="pricing-features">
+                        <li>Access for up to 4 family members</li>
+                        <li>All premium features</li>
+                        <li>Kids classes included</li>
+                        <li>Family progress tracking</li>
+                        <li>Discount on in-person workshops</li>
+                        <li>24/7 support</li>
+                    </ul>
+                    <button class="pricing-btn">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as wedding page) -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Logo and About Section -->
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="./public/logo.jpeg" alt="Relive Dance & Fitness" class="footer-logo">
+                        <div>
+                            <h3 class="brand-name">Relive</h3>
+                            <p class="brand-tagline">Dance & Fitness</p>
+                        </div>
+                    </div>
+                    <p class="footer-about">
+                        Empowering dancers of all levels to express themselves through movement.
+                        Join our community and discover the joy of dance.
+                    </p>
+                    <div class="social-media">
+                        <a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="TikTok" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links Section -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="training.html" class="footer-link">Training Programs</a></li>
+                        <li><a href="classes.html" class="footer-link">Online Classes</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Programs Section -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="bollywood.html" class="footer-link">Bollywood Dance</a></li>
+                        <li><a href="semi-classical.html" class="footer-link">Semi-Classical</a></li>
+                        <li><a href="kids.html" class="footer-link">Kids Dance</a></li>
+                        <li><a href="yoga.html" class="footer-link">Yoga</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p class="contact-text">57/4, Sneh Sadan, Subhash Hotel lane, near J.B Nagar metro station,
+                                JB Nagar, Andheri East, Mumbai- 400059</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p class="contact-text">+91 8828571648</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p class="contact-text">relivedanceandfitness@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 Relive Dance & Fitness. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#" class="legal-link">Privacy Policy</a>
+                    <a href="#" class="legal-link">Terms of Service</a>
+                    <a href="#" class="legal-link">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/7499653616" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <div class="whatsapp-tooltip">Chat with us</div>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animation library
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+</html>
